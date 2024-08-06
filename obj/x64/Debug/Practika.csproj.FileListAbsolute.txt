@@ -1,0 +1,10 @@
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\bin\x64\Debug\Practika.exe.config
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\bin\x64\Debug\Practika.exe
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\bin\x64\Debug\Practika.pdb
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.csproj.AssemblyReference.cache
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.Properties.Resources.resources
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.csproj.GenerateResource.cache
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.csproj.CoreCompileInputs.cache
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.exe
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.pdb
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.Form1.resources
