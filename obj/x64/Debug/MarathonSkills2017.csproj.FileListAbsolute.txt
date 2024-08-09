@@ -1,0 +1,13 @@
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\MarathonSkills2017.csproj.AssemblyReference.cache
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.ParentForm.resources
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.Properties.Resources.resources
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\MarathonSkills2017.csproj.GenerateResource.cache
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\MarathonSkills2017.csproj.CoreCompileInputs.cache
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.exe
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.pdb
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\bin\x64\Debug\Practika.exe.config
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\bin\x64\Debug\Practika.exe
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\bin\x64\Debug\Practika.pdb
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\bin\x64\Debug\ru-RU\Practika.resources.dll
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.ParentForm.ru-RU.resources
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\ru-RU\Practika.resources.dll

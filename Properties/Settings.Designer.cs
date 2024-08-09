@@ -33,5 +33,137 @@ namespace Practika.Properties {
                 return ((string)(this["MarathonSkillsDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 144, 62")]
+        public global::System.Drawing.Color TimerPanelBackground {
+            get {
+                return ((global::System.Drawing.Color)(this["TimerPanelBackground"]));
+            }
+            set {
+                this["TimerPanelBackground"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("36, 29, 112")]
+        public global::System.Drawing.Color HeaderPanelBackground {
+            get {
+                return ((global::System.Drawing.Color)(this["HeaderPanelBackground"]));
+            }
+            set {
+                this["HeaderPanelBackground"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        public global::System.Drawing.Color Background {
+            get {
+                return ((global::System.Drawing.Color)(this["Background"]));
+            }
+            set {
+                this["Background"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("235, 235, 235")]
+        public global::System.Drawing.Color Button {
+            get {
+                return ((global::System.Drawing.Color)(this["Button"]));
+            }
+            set {
+                this["Button"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        public global::System.Drawing.Color LightText {
+            get {
+                return ((global::System.Drawing.Color)(this["LightText"]));
+            }
+            set {
+                this["LightText"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("180, 180, 180")]
+        public global::System.Drawing.Color BorderButtonExit {
+            get {
+                return ((global::System.Drawing.Color)(this["BorderButtonExit"]));
+            }
+            set {
+                this["BorderButtonExit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
+        public global::System.Drawing.Color DarkText {
+            get {
+                return ((global::System.Drawing.Color)(this["DarkText"]));
+            }
+            set {
+                this["DarkText"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("180, 180, 180")]
+        public global::System.Drawing.Color GrayText {
+            get {
+                return ((global::System.Drawing.Color)(this["GrayText"]));
+            }
+            set {
+                this["GrayText"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("17")]
+        public int TimerFontsize {
+            get {
+                return ((int)(this["TimerFontsize"]));
+            }
+            set {
+                this["TimerFontsize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int BorderButtonWeight {
+            get {
+                return ((int)(this["BorderButtonWeight"]));
+            }
+            set {
+                this["BorderButtonWeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("253, 193, 0")]
+        public global::System.Drawing.Color ButtonExit {
+            get {
+                return ((global::System.Drawing.Color)(this["ButtonExit"]));
+            }
+            set {
+                this["ButtonExit"] = value;
+            }
+        }
     }
 }

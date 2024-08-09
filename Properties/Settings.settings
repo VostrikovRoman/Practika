@@ -10,5 +10,38 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=FROSTYMSI;Initial Catalog=MarathonSkillsDB;Integrated Security=True;TrustServerCertificate=True</Value>
     </Setting>
+    <Setting Name="TimerPanelBackground" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">0, 144, 62</Value>
+    </Setting>
+    <Setting Name="HeaderPanelBackground" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">36, 29, 112</Value>
+    </Setting>
+    <Setting Name="Background" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="Button" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">235, 235, 235</Value>
+    </Setting>
+    <Setting Name="LightText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="BorderButtonExit" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">180, 180, 180</Value>
+    </Setting>
+    <Setting Name="DarkText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="GrayText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">180, 180, 180</Value>
+    </Setting>
+    <Setting Name="TimerFontsize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">17</Value>
+    </Setting>
+    <Setting Name="BorderButtonWeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="ButtonExit" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">253, 193, 0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
