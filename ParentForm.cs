@@ -48,5 +48,6 @@ namespace Practika
             timer_stroke.Text = StringTimeToStart;
             timer_stroke.Show();
         }
+
     }
 }
