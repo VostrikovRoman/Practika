@@ -8,6 +8,7 @@ namespace Practika
 {
     internal static class Program
     {
+        static public ApplicationContext Context;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +17,8 @@ namespace Practika
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Context = new ApplicationContext(new MainForm());
+            Application.Run(Context);
         }
     }
 }

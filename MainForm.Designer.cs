@@ -33,15 +33,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.login_button = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
+            this.timerPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // timerPanel
-            // 
-            this.timerPanel.Location = new System.Drawing.Point(0, 755);
-            this.timerPanel.Size = new System.Drawing.Size(1509, 65);
             // 
             // topPanel
             // 
@@ -63,13 +59,22 @@
             this.label1.Font = new System.Drawing.Font("Arial", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Size = new System.Drawing.Size(1509, 168);
-            this.label1.Text = "MARATHON SKILLS 2016";
             // 
             // title_form
             // 
             this.title_form.Location = new System.Drawing.Point(0, 272);
             this.title_form.Size = new System.Drawing.Size(1509, 82);
             this.title_form.Visible = false;
+            // 
+            // timer_stroke
+            // 
+            this.timer_stroke.Size = new System.Drawing.Size(1509, 65);
+            this.timer_stroke.Text = "До начала марафона 68 дней 9 часов 55 минут 5 секунд ";
+            // 
+            // timerPanel
+            // 
+            this.timerPanel.Location = new System.Drawing.Point(0, 755);
+            this.timerPanel.Size = new System.Drawing.Size(1509, 65);
             // 
             // label2
             // 
@@ -130,6 +135,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "Я хочу узнать больше о событии";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -142,37 +148,37 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(572, 346);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
-            // button5
+            // login_button
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.BackColor = global::Practika.Properties.Settings.Default.Button;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "Button", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(1309, 678);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(171, 57);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Login";
-            this.button5.UseVisualStyleBackColor = false;
+            this.login_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.login_button.BackColor = global::Practika.Properties.Settings.Default.Button;
+            this.login_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_button.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "Button", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.login_button.Location = new System.Drawing.Point(1309, 678);
+            this.login_button.Name = "login_button";
+            this.login_button.Size = new System.Drawing.Size(171, 57);
+            this.login_button.TabIndex = 7;
+            this.login_button.Text = "Login";
+            this.login_button.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1509, 820);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.login_button);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "MainForm";
-            this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Controls.SetChildIndex(this.timerPanel, 0);
             this.Controls.SetChildIndex(this.topPanel, 0);
             this.Controls.SetChildIndex(this.title_form, 0);
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
-            this.Controls.SetChildIndex(this.button5, 0);
+            this.Controls.SetChildIndex(this.login_button, 0);
             this.topPanel.ResumeLayout(false);
+            this.timerPanel.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -185,6 +191,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button login_button;
     }
 }

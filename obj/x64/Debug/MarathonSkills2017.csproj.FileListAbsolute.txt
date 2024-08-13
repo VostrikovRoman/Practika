@@ -12,3 +12,4 @@ C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\b
 C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.ParentForm.ru-RU.resources
 C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\ru-RU\Practika.resources.dll
 C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.MainForm.resources
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.InfoForm.resources

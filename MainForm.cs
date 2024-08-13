@@ -22,5 +22,10 @@ namespace Practika
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TFunction.NextMainForm("Practika.InfoForm", this);
+        }
     }
 }
