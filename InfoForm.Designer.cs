@@ -28,21 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.charityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marathonSkillsDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marathonSkillsDBDataSet = new Practika.MarathonSkillsDBDataSet();
+            this.userBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.genderTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.GenderTableAdapter();
+            this.userTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.UserTableAdapter();
+            this.charityTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.CharityTableAdapter();
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marathonSkillsDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marathonSkillsDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // topPanel
-            // 
-            this.topPanel.Size = new System.Drawing.Size(1509, 90);
             // 
             // button1
             // 
@@ -55,13 +67,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Size = new System.Drawing.Size(1509, 54);
-            this.timer_stroke.Text = "До начала марафона 68 дней 9 часов 55 минут 5 секунд ";
-            // 
-            // timerPanel
-            // 
-            this.timerPanel.Location = new System.Drawing.Point(0, 766);
-            this.timerPanel.Size = new System.Drawing.Size(1509, 54);
+            this.timer_stroke.Text = "До начала марафона 67 дней 22 часа 9 минут 8 секунд ";
             // 
             // flowLayoutPanel1
             // 
@@ -83,13 +89,13 @@
             this.button2.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "Button", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(3, 3);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(516, 108);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Я хочу стать бегуном";
+            this.button2.Text = "MarathonSkills 2016";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
@@ -99,13 +105,13 @@
             this.button3.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "Button", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(552, 3);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(516, 108);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Я хочу стать спонсором бегуна";
+            this.button3.Text = "Насколько долгий марафон";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
@@ -115,13 +121,13 @@
             this.button4.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "Button", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(3, 144);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(516, 108);
             this.button4.TabIndex = 5;
-            this.button4.Text = "Я хочу узнать больше о событии";
+            this.button4.Text = "Предыдущие результаты";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button5
@@ -131,14 +137,45 @@
             this.button5.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "Button", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(552, 144);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(516, 108);
             this.button5.TabIndex = 6;
-            this.button5.Text = "Я хочу узнать больше о событии";
+            this.button5.Text = "Список благотворительных организаций";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // charityBindingSource
+            // 
+            this.charityBindingSource.DataMember = "Charity";
+            this.charityBindingSource.DataSource = this.marathonSkillsDBDataSetBindingSource;
+            // 
+            // marathonSkillsDBDataSetBindingSource
+            // 
+            this.marathonSkillsDBDataSetBindingSource.DataSource = this.marathonSkillsDBDataSet;
+            this.marathonSkillsDBDataSetBindingSource.Position = 0;
+            // 
+            // marathonSkillsDBDataSet
+            // 
+            this.marathonSkillsDBDataSet.DataSetName = "MarathonSkillsDBDataSet";
+            this.marathonSkillsDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userBindingSource1
+            // 
+            this.userBindingSource1.DataMember = "User";
+            this.userBindingSource1.DataSource = this.marathonSkillsDBDataSetBindingSource;
+            // 
+            // genderBindingSource
+            // 
+            this.genderBindingSource.DataMember = "Gender";
+            this.genderBindingSource.DataSource = this.marathonSkillsDBDataSetBindingSource;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataMember = "User";
+            this.userBindingSource.DataSource = this.marathonSkillsDBDataSetBindingSource;
             // 
             // panel1
             // 
@@ -155,6 +192,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 546);
             this.panel2.TabIndex = 9;
+            // 
+            // genderTableAdapter
+            // 
+            this.genderTableAdapter.ClearBeforeFill = true;
+            // 
+            // userTableAdapter
+            // 
+            this.userTableAdapter.ClearBeforeFill = true;
+            // 
+            // charityTableAdapter
+            // 
+            this.charityTableAdapter.ClearBeforeFill = true;
             // 
             // InfoForm
             // 
@@ -177,6 +226,12 @@
             this.topPanel.PerformLayout();
             this.timerPanel.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marathonSkillsDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marathonSkillsDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,5 +245,14 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.BindingSource marathonSkillsDBDataSetBindingSource;
+        private MarathonSkillsDBDataSet marathonSkillsDBDataSet;
+        private System.Windows.Forms.BindingSource genderBindingSource;
+        private MarathonSkillsDBDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
+        private System.Windows.Forms.BindingSource userBindingSource1;
+        private MarathonSkillsDBDataSetTableAdapters.UserTableAdapter userTableAdapter;
+        private System.Windows.Forms.BindingSource charityBindingSource;
+        private MarathonSkillsDBDataSetTableAdapters.CharityTableAdapter charityTableAdapter;
     }
 }

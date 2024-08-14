@@ -34,6 +34,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.login_button = new System.Windows.Forms.Button();
+            this.userTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.UserTableAdapter();
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -69,7 +70,7 @@
             // timer_stroke
             // 
             this.timer_stroke.Size = new System.Drawing.Size(1509, 65);
-            this.timer_stroke.Text = "До начала марафона 68 дней 9 часов 55 минут 5 секунд ";
+            this.timer_stroke.Text = "До начала марафона 68 дней 9 часов 50 минут 7 секунд ";
             // 
             // timerPanel
             // 
@@ -163,6 +164,10 @@
             this.login_button.Text = "Login";
             this.login_button.UseVisualStyleBackColor = false;
             // 
+            // userTableAdapter
+            // 
+            this.userTableAdapter.ClearBeforeFill = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,5 +197,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public System.Windows.Forms.Button login_button;
+        private MarathonSkillsDBDataSetTableAdapters.UserTableAdapter userTableAdapter;
     }
 }
