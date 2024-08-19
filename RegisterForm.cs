@@ -24,7 +24,7 @@ namespace Practika
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            TFunction.NextMainForm("Practika.MainForm", this);
         }
 
         private void login_button_Click(object sender, EventArgs e)

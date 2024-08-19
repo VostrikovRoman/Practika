@@ -47,7 +47,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 62 дня 23 часа 35 секунд ";
+            this.timer_stroke.Text = "До начала марафона 62 дня 21 час 11 минут 47 секунд ";
             // 
             // flowLayoutPanel1
             // 
@@ -116,7 +116,7 @@
             this.Controls.Add(this.login_button);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "RegisterForm";
-            this.Text = "RegisterForm";
+            this.Text = "Marathon Skills 2016 - Register as a runner";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
             this.Controls.SetChildIndex(this.login_button, 0);
