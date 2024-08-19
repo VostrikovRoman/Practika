@@ -17,7 +17,7 @@ namespace Practika
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Context = new ApplicationContext(new CharityListForm());
+            Context = new ApplicationContext(new SignInForm());
             Application.Run(Context);
         }
     }

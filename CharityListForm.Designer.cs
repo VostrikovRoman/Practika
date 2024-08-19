@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.real_table_charity)).BeginInit();
@@ -56,7 +57,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 67 дней 21 час 6 минут 28 секунд ";
+            this.timer_stroke.Text = "До начала марафона 62 дня 23 часа 59 минут 26 секунд ";
             // 
             // real_table_charity
             // 
@@ -192,5 +193,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CharityName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CharityDescription;
         private System.Windows.Forms.DataGridViewImageColumn CharityLogo;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }

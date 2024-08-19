@@ -70,7 +70,7 @@
             // timer_stroke
             // 
             this.timer_stroke.Size = new System.Drawing.Size(1509, 65);
-            this.timer_stroke.Text = "До начала марафона 68 дней 9 часов 50 минут 7 секунд ";
+            this.timer_stroke.Text = "До начала марафона 62 дня 22 часа 53 минуты 57 секунд ";
             // 
             // timerPanel
             // 
@@ -104,6 +104,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Я хочу стать бегуном";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -163,6 +164,7 @@
             this.login_button.TabIndex = 7;
             this.login_button.Text = "Login";
             this.login_button.UseVisualStyleBackColor = false;
+            this.login_button.Click += new System.EventHandler(this.login_button_Click_1);
             // 
             // userTableAdapter
             // 
