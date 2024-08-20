@@ -22,7 +22,7 @@ namespace Practika
             // TODO: данная строка кода позволяет загрузить данные в таблицу "marathonSkillsDBDataSet.Charity". При необходимости она может быть перемещена или удалена.
             this.charityTableAdapter.Fill(this.marathonSkillsDBDataSet.Charity);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "marathonSkillsDBDataSet.User". При необходимости она может быть перемещена или удалена.
-            this.userTableAdapter.Fill(this.marathonSkillsDBDataSet.User);
+            this.userTableAdapter.Fill(this.marathonSkillsDBDataSet.Users);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "marathonSkillsDBDataSet.Gender". При необходимости она может быть перемещена или удалена.
             this.genderTableAdapter.Fill(this.marathonSkillsDBDataSet.Gender);
 

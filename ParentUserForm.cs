@@ -21,5 +21,13 @@ namespace Practika
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы уверены, что хотите выйти?", "Выход", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                AccessControl.CloseAccess(this);
+            else
+                return;
+        }
     }
 }

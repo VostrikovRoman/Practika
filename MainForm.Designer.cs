@@ -34,7 +34,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.login_button = new System.Windows.Forms.Button();
-            this.userTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.UserTableAdapter();
+            this.userTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.UsersTableAdapter();
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -199,6 +199,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public System.Windows.Forms.Button login_button;
-        private MarathonSkillsDBDataSetTableAdapters.UserTableAdapter userTableAdapter;
+        private MarathonSkillsDBDataSetTableAdapters.UsersTableAdapter userTableAdapter;
     }
 }

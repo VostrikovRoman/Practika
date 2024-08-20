@@ -56,7 +56,7 @@ namespace Practika {
         
         private TimesheetDataTable tableTimesheet;
         
-        private UserDataTable tableUser;
+        private UsersDataTable tableUsers;
         
         private VolunteerDataTable tableVolunteer;
         
@@ -152,8 +152,8 @@ namespace Practika {
                 if ((ds.Tables["Timesheet"] != null)) {
                     base.Tables.Add(new TimesheetDataTable(ds.Tables["Timesheet"]));
                 }
-                if ((ds.Tables["User"] != null)) {
-                    base.Tables.Add(new UserDataTable(ds.Tables["User"]));
+                if ((ds.Tables["Users"] != null)) {
+                    base.Tables.Add(new UsersDataTable(ds.Tables["Users"]));
                 }
                 if ((ds.Tables["Volunteer"] != null)) {
                     base.Tables.Add(new VolunteerDataTable(ds.Tables["Volunteer"]));
@@ -340,9 +340,9 @@ namespace Practika {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public UserDataTable User {
+        public UsersDataTable Users {
             get {
-                return this.tableUser;
+                return this.tableUsers;
             }
         }
         
@@ -471,8 +471,8 @@ namespace Practika {
                 if ((ds.Tables["Timesheet"] != null)) {
                     base.Tables.Add(new TimesheetDataTable(ds.Tables["Timesheet"]));
                 }
-                if ((ds.Tables["User"] != null)) {
-                    base.Tables.Add(new UserDataTable(ds.Tables["User"]));
+                if ((ds.Tables["Users"] != null)) {
+                    base.Tables.Add(new UsersDataTable(ds.Tables["Users"]));
                 }
                 if ((ds.Tables["Volunteer"] != null)) {
                     base.Tables.Add(new VolunteerDataTable(ds.Tables["Volunteer"]));
@@ -606,10 +606,10 @@ namespace Practika {
                     this.tableTimesheet.InitVars();
                 }
             }
-            this.tableUser = ((UserDataTable)(base.Tables["User"]));
+            this.tableUsers = ((UsersDataTable)(base.Tables["Users"]));
             if ((initTable == true)) {
-                if ((this.tableUser != null)) {
-                    this.tableUser.InitVars();
+                if ((this.tableUsers != null)) {
+                    this.tableUsers.InitVars();
                 }
             }
             this.tableVolunteer = ((VolunteerDataTable)(base.Tables["Volunteer"]));
@@ -668,8 +668,8 @@ namespace Practika {
             base.Tables.Add(this.tableStaff);
             this.tableTimesheet = new TimesheetDataTable();
             base.Tables.Add(this.tableTimesheet);
-            this.tableUser = new UserDataTable();
-            base.Tables.Add(this.tableUser);
+            this.tableUsers = new UsersDataTable();
+            base.Tables.Add(this.tableUsers);
             this.tableVolunteer = new VolunteerDataTable();
             base.Tables.Add(this.tableVolunteer);
             this.relationFK__Runner__CountryC__2E1BDC42 = new global::System.Data.DataRelation("FK__Runner__CountryC__2E1BDC42", new global::System.Data.DataColumn[] {
@@ -677,7 +677,7 @@ namespace Practika {
                         this.tableRunner.CountryCodeColumn}, false);
             this.Relations.Add(this.relationFK__Runner__CountryC__2E1BDC42);
             this.relationFK__Runner__Email__2C3393D0 = new global::System.Data.DataRelation("FK__Runner__Email__2C3393D0", new global::System.Data.DataColumn[] {
-                        this.tableUser.EmailColumn}, new global::System.Data.DataColumn[] {
+                        this.tableUsers.EmailColumn}, new global::System.Data.DataColumn[] {
                         this.tableRunner.EmailColumn}, false);
             this.Relations.Add(this.relationFK__Runner__Email__2C3393D0);
             this.relationFK__Runner__Gender__2D27B809 = new global::System.Data.DataRelation("FK__Runner__Gender__2D27B809", new global::System.Data.DataColumn[] {
@@ -694,7 +694,7 @@ namespace Practika {
             this.Relations.Add(this.relationFK_StaffID);
             this.relationFK__User__RoleId__2B3F6F97 = new global::System.Data.DataRelation("FK__User__RoleId__2B3F6F97", new global::System.Data.DataColumn[] {
                         this.tableRole.RoleIdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableUser.RoleIdColumn}, false);
+                        this.tableUsers.RoleIdColumn}, false);
             this.Relations.Add(this.relationFK__User__RoleId__2B3F6F97);
             this.relationFK__Volunteer__Count__300424B4 = new global::System.Data.DataRelation("FK__Volunteer__Count__300424B4", new global::System.Data.DataColumn[] {
                         this.tableCountry.CountryCodeColumn}, new global::System.Data.DataColumn[] {
@@ -804,7 +804,7 @@ namespace Practika {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeUser() {
+        private bool ShouldSerializeUsers() {
             return false;
         }
         
@@ -918,7 +918,7 @@ namespace Practika {
         public delegate void TimesheetRowChangeEventHandler(object sender, TimesheetRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void UserRowChangeEventHandler(object sender, UserRowChangeEvent e);
+        public delegate void UsersRowChangeEventHandler(object sender, UsersRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void VolunteerRowChangeEventHandler(object sender, VolunteerRowChangeEvent e);
@@ -4701,7 +4701,7 @@ namespace Practika {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RunnerRow AddRunnerRow(UserRow parentUserRowByFK__Runner__Email__2C3393D0, GenderRow parentGenderRowByFK__Runner__Gender__2D27B809, System.DateTime DateOfBirth, CountryRow parentCountryRowByFK__Runner__CountryC__2E1BDC42) {
+            public RunnerRow AddRunnerRow(UsersRow parentUsersRowByFK__Runner__Email__2C3393D0, GenderRow parentGenderRowByFK__Runner__Gender__2D27B809, System.DateTime DateOfBirth, CountryRow parentCountryRowByFK__Runner__CountryC__2E1BDC42) {
                 RunnerRow rowRunnerRow = ((RunnerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4709,8 +4709,8 @@ namespace Practika {
                         null,
                         DateOfBirth,
                         null};
-                if ((parentUserRowByFK__Runner__Email__2C3393D0 != null)) {
-                    columnValuesArray[1] = parentUserRowByFK__Runner__Email__2C3393D0[0];
+                if ((parentUsersRowByFK__Runner__Email__2C3393D0 != null)) {
+                    columnValuesArray[1] = parentUsersRowByFK__Runner__Email__2C3393D0[0];
                 }
                 if ((parentGenderRowByFK__Runner__Gender__2D27B809 != null)) {
                     columnValuesArray[2] = parentGenderRowByFK__Runner__Gender__2D27B809[0];
@@ -5904,7 +5904,7 @@ namespace Practika {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class UserDataTable : global::System.Data.TypedTableBase<UserRow> {
+        public partial class UsersDataTable : global::System.Data.TypedTableBase<UsersRow> {
             
             private global::System.Data.DataColumn columnEmail;
             
@@ -5918,8 +5918,8 @@ namespace Practika {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserDataTable() {
-                this.TableName = "User";
+            public UsersDataTable() {
+                this.TableName = "Users";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -5927,7 +5927,7 @@ namespace Practika {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal UserDataTable(global::System.Data.DataTable table) {
+            internal UsersDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -5944,7 +5944,7 @@ namespace Practika {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected UserDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected UsersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -6000,34 +6000,34 @@ namespace Practika {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRow this[int index] {
+            public UsersRow this[int index] {
                 get {
-                    return ((UserRow)(this.Rows[index]));
+                    return ((UsersRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event UserRowChangeEventHandler UserRowChanging;
+            public event UsersRowChangeEventHandler UsersRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event UserRowChangeEventHandler UserRowChanged;
+            public event UsersRowChangeEventHandler UsersRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event UserRowChangeEventHandler UserRowDeleting;
+            public event UsersRowChangeEventHandler UsersRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event UserRowChangeEventHandler UserRowDeleted;
+            public event UsersRowChangeEventHandler UsersRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddUserRow(UserRow row) {
+            public void AddUsersRow(UsersRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRow AddUserRow(string Email, string Password, string FirstName, string LastName, RoleRow parentRoleRowByFK__User__RoleId__2B3F6F97) {
-                UserRow rowUserRow = ((UserRow)(this.NewRow()));
+            public UsersRow AddUsersRow(string Email, string Password, string FirstName, string LastName, RoleRow parentRoleRowByFK__User__RoleId__2B3F6F97) {
+                UsersRow rowUsersRow = ((UsersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Email,
                         Password,
@@ -6037,22 +6037,22 @@ namespace Practika {
                 if ((parentRoleRowByFK__User__RoleId__2B3F6F97 != null)) {
                     columnValuesArray[4] = parentRoleRowByFK__User__RoleId__2B3F6F97[0];
                 }
-                rowUserRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowUserRow);
-                return rowUserRow;
+                rowUsersRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUsersRow);
+                return rowUsersRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRow FindByEmail(string Email) {
-                return ((UserRow)(this.Rows.Find(new object[] {
+            public UsersRow FindByEmail(string Email) {
+                return ((UsersRow)(this.Rows.Find(new object[] {
                             Email})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                UserDataTable cln = ((UserDataTable)(base.Clone()));
+                UsersDataTable cln = ((UsersDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -6060,7 +6060,7 @@ namespace Practika {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new UserDataTable();
+                return new UsersDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6101,28 +6101,28 @@ namespace Practika {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRow NewUserRow() {
-                return ((UserRow)(this.NewRow()));
+            public UsersRow NewUsersRow() {
+                return ((UsersRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new UserRow(builder);
+                return new UsersRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(UserRow);
+                return typeof(UsersRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.UserRowChanged != null)) {
-                    this.UserRowChanged(this, new UserRowChangeEvent(((UserRow)(e.Row)), e.Action));
+                if ((this.UsersRowChanged != null)) {
+                    this.UsersRowChanged(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
@@ -6130,8 +6130,8 @@ namespace Practika {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.UserRowChanging != null)) {
-                    this.UserRowChanging(this, new UserRowChangeEvent(((UserRow)(e.Row)), e.Action));
+                if ((this.UsersRowChanging != null)) {
+                    this.UsersRowChanging(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
@@ -6139,8 +6139,8 @@ namespace Practika {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.UserRowDeleted != null)) {
-                    this.UserRowDeleted(this, new UserRowChangeEvent(((UserRow)(e.Row)), e.Action));
+                if ((this.UsersRowDeleted != null)) {
+                    this.UsersRowDeleted(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
@@ -6148,14 +6148,14 @@ namespace Practika {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.UserRowDeleting != null)) {
-                    this.UserRowDeleting(this, new UserRowChangeEvent(((UserRow)(e.Row)), e.Action));
+                if ((this.UsersRowDeleting != null)) {
+                    this.UsersRowDeleting(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveUserRow(UserRow row) {
+            public void RemoveUsersRow(UsersRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -6182,7 +6182,7 @@ namespace Practika {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "UserDataTable";
+                attribute2.FixedValue = "UsersDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -7459,12 +7459,12 @@ namespace Practika {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRow[] GetUserRows() {
+            public UsersRow[] GetUsersRows() {
                 if ((this.Table.ChildRelations["FK__User__RoleId__2B3F6F97"] == null)) {
-                    return new UserRow[0];
+                    return new UsersRow[0];
                 }
                 else {
-                    return ((UserRow[])(base.GetChildRows(this.Table.ChildRelations["FK__User__RoleId__2B3F6F97"])));
+                    return ((UsersRow[])(base.GetChildRows(this.Table.ChildRelations["FK__User__RoleId__2B3F6F97"])));
                 }
             }
         }
@@ -7556,9 +7556,9 @@ namespace Practika {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRow UserRow {
+            public UsersRow UsersRow {
                 get {
-                    return ((UserRow)(this.GetParentRow(this.Table.ParentRelations["FK__Runner__Email__2C3393D0"])));
+                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK__Runner__Email__2C3393D0"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK__Runner__Email__2C3393D0"]);
@@ -7846,25 +7846,25 @@ namespace Practika {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class UserRow : global::System.Data.DataRow {
+        public partial class UsersRow : global::System.Data.DataRow {
             
-            private UserDataTable tableUser;
+            private UsersDataTable tableUsers;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal UserRow(global::System.Data.DataRowBuilder rb) : 
+            internal UsersRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableUser = ((UserDataTable)(this.Table));
+                this.tableUsers = ((UsersDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Email {
                 get {
-                    return ((string)(this[this.tableUser.EmailColumn]));
+                    return ((string)(this[this.tableUsers.EmailColumn]));
                 }
                 set {
-                    this[this.tableUser.EmailColumn] = value;
+                    this[this.tableUsers.EmailColumn] = value;
                 }
             }
             
@@ -7872,10 +7872,10 @@ namespace Practika {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Password {
                 get {
-                    return ((string)(this[this.tableUser.PasswordColumn]));
+                    return ((string)(this[this.tableUsers.PasswordColumn]));
                 }
                 set {
-                    this[this.tableUser.PasswordColumn] = value;
+                    this[this.tableUsers.PasswordColumn] = value;
                 }
             }
             
@@ -7884,14 +7884,14 @@ namespace Practika {
             public string FirstName {
                 get {
                     try {
-                        return ((string)(this[this.tableUser.FirstNameColumn]));
+                        return ((string)(this[this.tableUsers.FirstNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'FirstName\' в таблице \'User\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'FirstName\' в таблице \'Users\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUser.FirstNameColumn] = value;
+                    this[this.tableUsers.FirstNameColumn] = value;
                 }
             }
             
@@ -7900,14 +7900,14 @@ namespace Practika {
             public string LastName {
                 get {
                     try {
-                        return ((string)(this[this.tableUser.LastNameColumn]));
+                        return ((string)(this[this.tableUsers.LastNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'LastName\' в таблице \'User\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'LastName\' в таблице \'Users\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUser.LastNameColumn] = value;
+                    this[this.tableUsers.LastNameColumn] = value;
                 }
             }
             
@@ -7915,10 +7915,10 @@ namespace Practika {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string RoleId {
                 get {
-                    return ((string)(this[this.tableUser.RoleIdColumn]));
+                    return ((string)(this[this.tableUsers.RoleIdColumn]));
                 }
                 set {
-                    this[this.tableUser.RoleIdColumn] = value;
+                    this[this.tableUsers.RoleIdColumn] = value;
                 }
             }
             
@@ -7936,25 +7936,25 @@ namespace Practika {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsFirstNameNull() {
-                return this.IsNull(this.tableUser.FirstNameColumn);
+                return this.IsNull(this.tableUsers.FirstNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetFirstNameNull() {
-                this[this.tableUser.FirstNameColumn] = global::System.Convert.DBNull;
+                this[this.tableUsers.FirstNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsLastNameNull() {
-                return this.IsNull(this.tableUser.LastNameColumn);
+                return this.IsNull(this.tableUsers.LastNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetLastNameNull() {
-                this[this.tableUser.LastNameColumn] = global::System.Convert.DBNull;
+                this[this.tableUsers.LastNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8643,22 +8643,22 @@ namespace Practika {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class UserRowChangeEvent : global::System.EventArgs {
+        public class UsersRowChangeEvent : global::System.EventArgs {
             
-            private UserRow eventRow;
+            private UsersRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRowChangeEvent(UserRow row, global::System.Data.DataRowAction action) {
+            public UsersRowChangeEvent(UsersRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRow Row {
+            public UsersRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -14700,7 +14700,7 @@ SELECT TimesheetID, StaffID, StartDateTime, EndDateTime, PayAmount FROM Timeshee
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class UserTableAdapter : global::System.ComponentModel.Component {
+    public partial class UsersTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -14714,7 +14714,7 @@ SELECT TimesheetID, StaffID, StartDateTime, EndDateTime, PayAmount FROM Timeshee
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public UserTableAdapter() {
+        public UsersTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -14811,7 +14811,7 @@ SELECT TimesheetID, StaffID, StartDateTime, EndDateTime, PayAmount FROM Timeshee
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "User";
+            tableMapping.DataSetTable = "Users";
             tableMapping.ColumnMappings.Add("Email", "Email");
             tableMapping.ColumnMappings.Add("Password", "Password");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
@@ -14880,7 +14880,7 @@ SELECT Email, Password, FirstName, LastName, RoleId FROM [User] WHERE (Email = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(MarathonSkillsDBDataSet.UserDataTable dataTable) {
+        public virtual int Fill(MarathonSkillsDBDataSet.UsersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -14893,9 +14893,9 @@ SELECT Email, Password, FirstName, LastName, RoleId FROM [User] WHERE (Email = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual MarathonSkillsDBDataSet.UserDataTable GetData() {
+        public virtual MarathonSkillsDBDataSet.UsersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            MarathonSkillsDBDataSet.UserDataTable dataTable = new MarathonSkillsDBDataSet.UserDataTable();
+            MarathonSkillsDBDataSet.UsersDataTable dataTable = new MarathonSkillsDBDataSet.UsersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -14903,7 +14903,7 @@ SELECT Email, Password, FirstName, LastName, RoleId FROM [User] WHERE (Email = @
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MarathonSkillsDBDataSet.UserDataTable dataTable) {
+        public virtual int Update(MarathonSkillsDBDataSet.UsersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -14911,7 +14911,7 @@ SELECT Email, Password, FirstName, LastName, RoleId FROM [User] WHERE (Email = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(MarathonSkillsDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "User");
+            return this.Adapter.Update(dataSet, "Users");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15590,7 +15590,7 @@ SELECT VolunteerId, FirstName, LastName, CountryCode, Gender FROM Volunteer WHER
         
         private TimesheetTableAdapter _timesheetTableAdapter;
         
-        private UserTableAdapter _userTableAdapter;
+        private UsersTableAdapter _usersTableAdapter;
         
         private VolunteerTableAdapter _volunteerTableAdapter;
         
@@ -15838,12 +15838,12 @@ SELECT VolunteerId, FirstName, LastName, CountryCode, Gender FROM Volunteer WHER
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public UserTableAdapter UserTableAdapter {
+        public UsersTableAdapter UsersTableAdapter {
             get {
-                return this._userTableAdapter;
+                return this._usersTableAdapter;
             }
             set {
-                this._userTableAdapter = value;
+                this._usersTableAdapter = value;
             }
         }
         
@@ -15944,9 +15944,9 @@ SELECT VolunteerId, FirstName, LastName, CountryCode, Gender FROM Volunteer WHER
                             && (this._timesheetTableAdapter.Connection != null))) {
                     return this._timesheetTableAdapter.Connection;
                 }
-                if (((this._userTableAdapter != null) 
-                            && (this._userTableAdapter.Connection != null))) {
-                    return this._userTableAdapter.Connection;
+                if (((this._usersTableAdapter != null) 
+                            && (this._usersTableAdapter.Connection != null))) {
+                    return this._usersTableAdapter.Connection;
                 }
                 if (((this._volunteerTableAdapter != null) 
                             && (this._volunteerTableAdapter.Connection != null))) {
@@ -16013,7 +16013,7 @@ SELECT VolunteerId, FirstName, LastName, CountryCode, Gender FROM Volunteer WHER
                 if ((this._timesheetTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._userTableAdapter != null)) {
+                if ((this._usersTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._volunteerTableAdapter != null)) {
@@ -16075,12 +16075,12 @@ SELECT VolunteerId, FirstName, LastName, CountryCode, Gender FROM Volunteer WHER
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._userTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._usersTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._userTableAdapter.Update(updatedRows));
+                    result = (result + this._usersTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16242,11 +16242,11 @@ SELECT VolunteerId, FirstName, LastName, CountryCode, Gender FROM Volunteer WHER
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._userTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._usersTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._userTableAdapter.Update(addedRows));
+                    result = (result + this._usersTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16452,11 +16452,11 @@ SELECT VolunteerId, FirstName, LastName, CountryCode, Gender FROM Volunteer WHER
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._userTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._usersTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._userTableAdapter.Update(deletedRows));
+                    result = (result + this._usersTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16619,8 +16619,8 @@ SELECT VolunteerId, FirstName, LastName, CountryCode, Gender FROM Volunteer WHER
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._userTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._userTableAdapter.Connection) == false))) {
+            if (((this._usersTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._usersTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -16805,13 +16805,13 @@ SELECT VolunteerId, FirstName, LastName, CountryCode, Gender FROM Volunteer WHER
                         adaptersWithAcceptChangesDuringUpdate.Add(this._timesheetTableAdapter.Adapter);
                     }
                 }
-                if ((this._userTableAdapter != null)) {
-                    revertConnections.Add(this._userTableAdapter, this._userTableAdapter.Connection);
-                    this._userTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._userTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._userTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._userTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._userTableAdapter.Adapter);
+                if ((this._usersTableAdapter != null)) {
+                    revertConnections.Add(this._usersTableAdapter, this._usersTableAdapter.Connection);
+                    this._usersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._usersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._usersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._usersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._usersTableAdapter.Adapter);
                     }
                 }
                 if ((this._volunteerTableAdapter != null)) {
@@ -16945,9 +16945,9 @@ SELECT VolunteerId, FirstName, LastName, CountryCode, Gender FROM Volunteer WHER
                     this._timesheetTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._timesheetTableAdapter]));
                     this._timesheetTableAdapter.Transaction = null;
                 }
-                if ((this._userTableAdapter != null)) {
-                    this._userTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._userTableAdapter]));
-                    this._userTableAdapter.Transaction = null;
+                if ((this._usersTableAdapter != null)) {
+                    this._usersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._usersTableAdapter]));
+                    this._usersTableAdapter.Transaction = null;
                 }
                 if ((this._volunteerTableAdapter != null)) {
                     this._volunteerTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._volunteerTableAdapter]));

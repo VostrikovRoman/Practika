@@ -26,5 +26,13 @@ namespace Practika
         {
             TFunction.NextMainForm("Practika.MainForm", this);
         }
+
+        private void sign_in_button_Click(object sender, EventArgs e)
+        {
+            if (AccessControl.AutorizationInSystem(login.Text, password.Text) == 1)
+                AccessControl.GetRights(this);
+            else
+                MessageBox.Show("Неправильно указан логин или пароль");
+        }
     }
 }

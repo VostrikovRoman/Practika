@@ -37,13 +37,13 @@
             this.charityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.marathonSkillsDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.marathonSkillsDBDataSet = new Practika.MarathonSkillsDBDataSet();
-            this.userBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.genderTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.GenderTableAdapter();
-            this.userTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.UserTableAdapter();
+            this.userTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.UsersTableAdapter();
             this.charityTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.CharityTableAdapter();
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
@@ -51,9 +51,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marathonSkillsDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marathonSkillsDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -164,8 +164,8 @@
             // 
             // userBindingSource1
             // 
-            this.userBindingSource1.DataMember = "User";
-            this.userBindingSource1.DataSource = this.marathonSkillsDBDataSetBindingSource;
+            this.usersBindingSource1.DataMember = "Users";
+            this.usersBindingSource1.DataSource = this.marathonSkillsDBDataSetBindingSource;
             // 
             // genderBindingSource
             // 
@@ -174,8 +174,8 @@
             // 
             // userBindingSource
             // 
-            this.userBindingSource.DataMember = "User";
-            this.userBindingSource.DataSource = this.marathonSkillsDBDataSetBindingSource;
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.marathonSkillsDBDataSetBindingSource;
             // 
             // panel1
             // 
@@ -229,9 +229,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marathonSkillsDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marathonSkillsDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,13 +245,13 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.BindingSource usersBindingSource;
         private System.Windows.Forms.BindingSource marathonSkillsDBDataSetBindingSource;
         private MarathonSkillsDBDataSet marathonSkillsDBDataSet;
         private System.Windows.Forms.BindingSource genderBindingSource;
         private MarathonSkillsDBDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
-        private System.Windows.Forms.BindingSource userBindingSource1;
-        private MarathonSkillsDBDataSetTableAdapters.UserTableAdapter userTableAdapter;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private MarathonSkillsDBDataSetTableAdapters.UsersTableAdapter userTableAdapter;
         private System.Windows.Forms.BindingSource charityBindingSource;
         private MarathonSkillsDBDataSetTableAdapters.CharityTableAdapter charityTableAdapter;
     }
