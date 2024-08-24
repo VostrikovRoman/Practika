@@ -85,6 +85,7 @@
     <Compile Include="CoordinatorMenuForm.Designer.cs">
       <DependentUpon>CoordinatorMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions.cs" />
     <Compile Include="InfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
