@@ -51,12 +51,12 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 58 дней 5 часов 49 минут 28 секунд ";
+            this.timer_stroke.Text = "До начала марафона 20 дней 17 часов 41 минута 10 секунд ";
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(366, 224);
+            this.label2.Location = new System.Drawing.Point(367, 234);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(798, 120);
             this.label2.TabIndex = 5;
@@ -84,7 +84,6 @@
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(414, 35);
             this.login.TabIndex = 7;
-            this.login.Text = "Hello";
             // 
             // password
             // 
@@ -95,7 +94,7 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(414, 35);
             this.password.TabIndex = 9;
-            this.password.Text = "Hello";
+            this.password.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -115,7 +114,7 @@
             this.sign_in_button.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "ButtonExit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.sign_in_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sign_in_button.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sign_in_button.Location = new System.Drawing.Point(550, 533);
+            this.sign_in_button.Location = new System.Drawing.Point(569, 551);
             this.sign_in_button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.sign_in_button.Name = "sign_in_button";
             this.sign_in_button.Size = new System.Drawing.Size(151, 42);
@@ -132,13 +131,14 @@
             this.button2.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "ButtonExit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(720, 533);
+            this.button2.Location = new System.Drawing.Point(739, 551);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(244, 42);
             this.button2.TabIndex = 11;
             this.button2.Text = "Регистрация";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -146,7 +146,7 @@
             this.flowLayoutPanel1.Controls.Add(this.login);
             this.flowLayoutPanel1.Controls.Add(this.label4);
             this.flowLayoutPanel1.Controls.Add(this.password);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(415, 392);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(434, 410);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(568, 135);
             this.flowLayoutPanel1.TabIndex = 12;
@@ -161,7 +161,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Name = "SignInForm";
-            this.Text = "Marathon Skills 2016 - Autorization";
+            this.Text = "Marathon Skills 2016 - Login";
             this.Load += new System.EventHandler(this.SignInForm_Load);
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.label2, 0);

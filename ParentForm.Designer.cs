@@ -123,11 +123,12 @@
             // ParentForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = global::Practika.Properties.Settings.Default.Button;
             this.ClientSize = new System.Drawing.Size(1509, 820);
             this.Controls.Add(this.title_form);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.timerPanel);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "Button", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

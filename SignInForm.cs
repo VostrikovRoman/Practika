@@ -34,5 +34,10 @@ namespace Practika
             else
                 MessageBox.Show("Неправильно указан логин или пароль");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TFunction.NextMainForm("Practika.RegistrRunnerForm", this);
+        }
     }
 }

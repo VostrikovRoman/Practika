@@ -122,6 +122,12 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrRunnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrRunnerForm.Designer.cs">
+      <DependentUpon>RegistrRunnerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RunnerMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrRunnerForm.resx">
+      <DependentUpon>RegistrRunnerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RunnerMenuForm.resx">
       <DependentUpon>RunnerMenuForm.cs</DependentUpon>
