@@ -29,5 +29,10 @@ namespace Practika
             else
                 return;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TFunction.NextMainForm("Practika.MainForm", this);
+        }
     }
 }

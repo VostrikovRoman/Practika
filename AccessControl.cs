@@ -58,7 +58,8 @@ namespace Practika
                     if (MainUser.Role == "C")
                         TFunction.NextMainForm("Practika.CoordinatorMenuForm", CurrentForm);
                     else
-                        TFunction.NextMainForm("Practika.AdministratorMenuForm", CurrentForm);
+                        if (MainUser.Role == "A")
+                            TFunction.NextMainForm("Practika.AdministratorMenuForm", CurrentForm);
 
         }
 
@@ -78,12 +79,12 @@ namespace Practika
 
         public Runner (string Email)
         {
-
+            GetData(Email);
         }
         public void GetData(string Email)
         {
             string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
-            string SQL = "SELECT * FROM User WHERE Email = '" + Email + "'";
+            string SQL = "SELECT * FROM Users WHERE Email = '" + Email + "'";
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();

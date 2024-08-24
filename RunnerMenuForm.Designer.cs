@@ -39,13 +39,24 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // topPanel
+            // 
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            // 
             // title_form
             // 
             this.title_form.Text = "Меню бегуна";
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 62 дня 21 час 23 минуты 44 секунды ";
+            this.timer_stroke.Size = new System.Drawing.Size(1509, 44);
+            this.timer_stroke.Text = "До начала марафона 58 дней 5 часов 58 минут 42 секунды ";
+            // 
+            // timerPanel
+            // 
+            this.timerPanel.Location = new System.Drawing.Point(0, 776);
+            this.timerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.timerPanel.Size = new System.Drawing.Size(1509, 44);
             // 
             // flowLayoutPanel1
             // 

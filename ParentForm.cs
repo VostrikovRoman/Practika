@@ -27,7 +27,7 @@ namespace Practika
         {
             string StringTimeToStart = "До начала марафона ";
             DateTime DateNow = DateTime.Now;
-            DateTime DateStart = new DateTime(2024, 10, 21, 12, 00, 00);
+            DateTime DateStart = new DateTime(2024, 09, 14, 00, 00, 00);
             TimeToStart[] ObjectTime = new TimeToStart[4];
 
             ObjectTime[0] = new TimeToStart("день", "дней", "дня");

@@ -40,9 +40,13 @@
             this.topPanel.Controls.SetChildIndex(this.label1, 0);
             this.topPanel.Controls.SetChildIndex(this.button2, 0);
             // 
+            // button1
+            // 
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 61 день 21 час 42 минуты 46 секунд ";
+            this.timer_stroke.Text = "До начала марафона 58 дней 5 часов 57 минут 6 секунд ";
             // 
             // button2
             // 

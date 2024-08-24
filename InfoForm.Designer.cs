@@ -43,7 +43,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.genderTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.GenderTableAdapter();
-            this.userTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.UsersTableAdapter();
+            this.usersTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.UsersTableAdapter();
             this.charityTableAdapter = new Practika.MarathonSkillsDBDataSetTableAdapters.CharityTableAdapter();
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
@@ -172,7 +172,7 @@
             this.genderBindingSource.DataMember = "Gender";
             this.genderBindingSource.DataSource = this.marathonSkillsDBDataSetBindingSource;
             // 
-            // userBindingSource
+            // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "Users";
             this.usersBindingSource.DataSource = this.marathonSkillsDBDataSetBindingSource;
@@ -199,7 +199,7 @@
             // 
             // userTableAdapter
             // 
-            this.userTableAdapter.ClearBeforeFill = true;
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // charityTableAdapter
             // 
@@ -251,7 +251,7 @@
         private System.Windows.Forms.BindingSource genderBindingSource;
         private MarathonSkillsDBDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
         private System.Windows.Forms.BindingSource usersBindingSource1;
-        private MarathonSkillsDBDataSetTableAdapters.UsersTableAdapter userTableAdapter;
+        private MarathonSkillsDBDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
         private System.Windows.Forms.BindingSource charityBindingSource;
         private MarathonSkillsDBDataSetTableAdapters.CharityTableAdapter charityTableAdapter;
     }

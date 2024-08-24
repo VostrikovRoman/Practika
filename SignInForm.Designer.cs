@@ -51,7 +51,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 61 день 21 час 40 минут 20 секунд ";
+            this.timer_stroke.Text = "До начала марафона 58 дней 5 часов 49 минут 28 секунд ";
             // 
             // label2
             // 
@@ -79,28 +79,28 @@
             this.login.BackColor = System.Drawing.Color.White;
             this.login.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.login.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.login.Location = new System.Drawing.Point(135, 3);
-            this.login.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
-            this.login.Multiline = true;
+            this.login.Location = new System.Drawing.Point(135, 7);
+            this.login.Margin = new System.Windows.Forms.Padding(3, 7, 3, 20);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(414, 44);
+            this.login.Size = new System.Drawing.Size(414, 35);
             this.login.TabIndex = 7;
+            this.login.Text = "Hello";
             // 
             // password
             // 
             this.password.BackColor = System.Drawing.Color.White;
             this.password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.password.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.password.Location = new System.Drawing.Point(135, 70);
-            this.password.Multiline = true;
+            this.password.Location = new System.Drawing.Point(135, 65);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(414, 44);
+            this.password.Size = new System.Drawing.Size(414, 35);
             this.password.TabIndex = 9;
+            this.password.Text = "Hello";
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(3, 67);
+            this.label4.Location = new System.Drawing.Point(3, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 44);
             this.label4.TabIndex = 8;
