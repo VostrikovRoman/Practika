@@ -40,12 +40,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.surname_box = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.gender_box = new System.Windows.Forms.ComboBox();
-            this.country_box = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.gender_box = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.date_box = new System.Windows.Forms.DateTimePicker();
+            this.country_box = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.date_box = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sign_in_button = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -64,7 +64,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 20 дней 14 часов 5 минут 10 секунд ";
+            this.timer_stroke.Text = "До начала марафона 20 дней 12 часов 15 минут 1 секунда ";
             // 
             // label2
             // 
@@ -206,26 +206,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1159, 313);
             this.flowLayoutPanel1.TabIndex = 18;
             // 
-            // gender_box
-            // 
-            this.gender_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gender_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gender_box.FormattingEnabled = true;
-            this.gender_box.Location = new System.Drawing.Point(808, 3);
-            this.gender_box.Name = "gender_box";
-            this.gender_box.Size = new System.Drawing.Size(320, 35);
-            this.gender_box.TabIndex = 18;
-            // 
-            // country_box
-            // 
-            this.country_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.country_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.country_box.FormattingEnabled = true;
-            this.country_box.Location = new System.Drawing.Point(808, 65);
-            this.country_box.Name = "country_box";
-            this.country_box.Size = new System.Drawing.Size(320, 35);
-            this.country_box.TabIndex = 19;
-            // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -235,6 +215,16 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Пол:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // gender_box
+            // 
+            this.gender_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gender_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gender_box.FormattingEnabled = true;
+            this.gender_box.Location = new System.Drawing.Point(808, 3);
+            this.gender_box.Name = "gender_box";
+            this.gender_box.Size = new System.Drawing.Size(320, 35);
+            this.gender_box.TabIndex = 18;
             // 
             // label9
             // 
@@ -246,13 +236,15 @@
             this.label9.Text = "Страна:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // date_box
+            // country_box
             // 
-            this.date_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.date_box.Location = new System.Drawing.Point(808, 127);
-            this.date_box.Name = "date_box";
-            this.date_box.Size = new System.Drawing.Size(320, 35);
-            this.date_box.TabIndex = 22;
+            this.country_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.country_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.country_box.FormattingEnabled = true;
+            this.country_box.Location = new System.Drawing.Point(808, 65);
+            this.country_box.Name = "country_box";
+            this.country_box.Size = new System.Drawing.Size(320, 35);
+            this.country_box.TabIndex = 19;
             // 
             // label10
             // 
@@ -263,6 +255,14 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Дата рождения:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // date_box
+            // 
+            this.date_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.date_box.Location = new System.Drawing.Point(808, 127);
+            this.date_box.Name = "date_box";
+            this.date_box.Size = new System.Drawing.Size(320, 35);
+            this.date_box.TabIndex = 22;
             // 
             // panel1
             // 
@@ -303,6 +303,7 @@
             this.button2.TabIndex = 20;
             this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // RegistrRunnerForm
             // 
