@@ -21,3 +21,4 @@ C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\o
 C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.AdministratorMenuForm.resources
 C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.CoordinatorMenuForm.resources
 C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.RegistrRunnerForm.resources
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.SponsorForm.resources

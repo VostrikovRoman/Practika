@@ -58,6 +58,24 @@ namespace Practika
             }
         }
 
+        static public void LoadRunners(ComboBox runner_box)
+        {
+            string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
+            string SQL = "SELECT * FROM Runner JOIN Users ON Runner.Email = Users.Email JOIN Country ON Runner.CountryCode = Country.CountryCode";
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(SQL, connection);
+
+                DataTable table_runner = new DataTable();
+                adapter.Fill(table_runner);
+                runner_box.DataSource = table_runner;
+                runner_box.DisplayMember = "FirstName";
+                runner_box.ValueMember = "RunnerId";
+
+            }
+        }
+
         static public int CheckEmail(string email_box)
         {
             string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;

@@ -64,7 +64,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 20 дней 12 часов 15 минут 1 секунда ";
+            this.timer_stroke.Text = "До начала марафона 16 дней 13 часов 15 минут 23 секунды ";
             // 
             // label2
             // 
@@ -82,8 +82,8 @@
             this.email_box.BackColor = System.Drawing.Color.White;
             this.email_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.email_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.email_box.Location = new System.Drawing.Point(234, 7);
-            this.email_box.Margin = new System.Windows.Forms.Padding(3, 7, 20, 20);
+            this.email_box.Location = new System.Drawing.Point(234, 3);
+            this.email_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
             this.email_box.Name = "email_box";
             this.email_box.Size = new System.Drawing.Size(320, 35);
             this.email_box.TabIndex = 8;
@@ -91,7 +91,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(3, 62);
+            this.label3.Location = new System.Drawing.Point(3, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(225, 34);
             this.label3.TabIndex = 9;
@@ -113,8 +113,8 @@
             this.password_box.BackColor = System.Drawing.Color.White;
             this.password_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.password_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.password_box.Location = new System.Drawing.Point(234, 69);
-            this.password_box.Margin = new System.Windows.Forms.Padding(3, 7, 20, 20);
+            this.password_box.Location = new System.Drawing.Point(234, 61);
+            this.password_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
             this.password_box.Name = "password_box";
             this.password_box.Size = new System.Drawing.Size(320, 35);
             this.password_box.TabIndex = 10;
@@ -122,7 +122,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(3, 124);
+            this.label5.Location = new System.Drawing.Point(3, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(225, 34);
             this.label5.TabIndex = 13;
@@ -134,8 +134,8 @@
             this.retry_password_box.BackColor = System.Drawing.Color.White;
             this.retry_password_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.retry_password_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.retry_password_box.Location = new System.Drawing.Point(234, 131);
-            this.retry_password_box.Margin = new System.Windows.Forms.Padding(3, 7, 20, 20);
+            this.retry_password_box.Location = new System.Drawing.Point(234, 119);
+            this.retry_password_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
             this.retry_password_box.Name = "retry_password_box";
             this.retry_password_box.Size = new System.Drawing.Size(320, 35);
             this.retry_password_box.TabIndex = 12;
@@ -143,7 +143,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(3, 186);
+            this.label6.Location = new System.Drawing.Point(3, 174);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(225, 34);
             this.label6.TabIndex = 15;
@@ -155,8 +155,8 @@
             this.name_box.BackColor = System.Drawing.Color.White;
             this.name_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.name_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.name_box.Location = new System.Drawing.Point(234, 193);
-            this.name_box.Margin = new System.Windows.Forms.Padding(3, 7, 20, 20);
+            this.name_box.Location = new System.Drawing.Point(234, 177);
+            this.name_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
             this.name_box.Name = "name_box";
             this.name_box.Size = new System.Drawing.Size(320, 35);
             this.name_box.TabIndex = 14;
@@ -164,7 +164,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(3, 248);
+            this.label7.Location = new System.Drawing.Point(3, 232);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(225, 34);
             this.label7.TabIndex = 17;
@@ -176,8 +176,8 @@
             this.surname_box.BackColor = System.Drawing.Color.White;
             this.surname_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.surname_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.surname_box.Location = new System.Drawing.Point(234, 255);
-            this.surname_box.Margin = new System.Windows.Forms.Padding(3, 7, 20, 20);
+            this.surname_box.Location = new System.Drawing.Point(234, 235);
+            this.surname_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
             this.surname_box.Name = "surname_box";
             this.surname_box.Size = new System.Drawing.Size(320, 35);
             this.surname_box.TabIndex = 16;
@@ -229,7 +229,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(577, 62);
+            this.label9.Location = new System.Drawing.Point(577, 58);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(225, 34);
             this.label9.TabIndex = 21;
@@ -241,7 +241,7 @@
             this.country_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.country_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.country_box.FormattingEnabled = true;
-            this.country_box.Location = new System.Drawing.Point(808, 65);
+            this.country_box.Location = new System.Drawing.Point(808, 61);
             this.country_box.Name = "country_box";
             this.country_box.Size = new System.Drawing.Size(320, 35);
             this.country_box.TabIndex = 19;
@@ -249,7 +249,7 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(577, 124);
+            this.label10.Location = new System.Drawing.Point(577, 116);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(225, 34);
             this.label10.TabIndex = 23;
@@ -259,14 +259,14 @@
             // date_box
             // 
             this.date_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.date_box.Location = new System.Drawing.Point(808, 127);
+            this.date_box.Location = new System.Drawing.Point(808, 119);
             this.date_box.Name = "date_box";
             this.date_box.Size = new System.Drawing.Size(320, 35);
             this.date_box.TabIndex = 22;
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(577, 189);
+            this.panel1.Location = new System.Drawing.Point(577, 177);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(551, 35);
             this.panel1.TabIndex = 24;

@@ -141,6 +141,12 @@
     <Compile Include="SignInForm.Designer.cs">
       <DependentUpon>SignInForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SponsorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SponsorForm.Designer.cs">
+      <DependentUpon>SponsorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TFunction.cs" />
     <Compile Include="TimeToStart.cs" />
     <EmbeddedResource Include="AdministratorMenuForm.resx">
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignInForm.resx">
       <DependentUpon>SignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SponsorForm.resx">
+      <DependentUpon>SponsorForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MarathonSkillsDBDataSet.xsc">
       <DependentUpon>MarathonSkillsDBDataSet.xsd</DependentUpon>

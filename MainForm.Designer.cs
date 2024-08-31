@@ -70,7 +70,7 @@
             // timer_stroke
             // 
             this.timer_stroke.Size = new System.Drawing.Size(1509, 65);
-            this.timer_stroke.Text = "До начала марафона 62 дня 22 часа 53 минуты 57 секунд ";
+            this.timer_stroke.Text = "До начала марафона 16 дней 19 часов 40 минут 37 секунд ";
             // 
             // timerPanel
             // 
@@ -121,6 +121,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Я хочу стать спонсором бегуна";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
