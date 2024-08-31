@@ -35,12 +35,16 @@ namespace Practika
         {
             foreach (Control n in this.Controls)
             {
-                if (n is TextBox)
-                    if ((n as TextBox).TextLength == 0)
-                    {
-                        MessageBox.Show("Необходимо заполнить все поля", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
+                if (name_box.Text.Length == 0)
+                {
+                    MessageBox.Show("Необходимо заполнить все поля", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (surname_box.Text.Length == 0)
+                {
+                    MessageBox.Show("Необходимо заполнить все поля", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if (TFunction.CheckEmail(email_box.Text) == 0)
                     return;
                 if (TFunction.CheckPassword(password_box.Text, retry_password_box.Text) == 0)

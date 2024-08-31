@@ -36,5 +36,10 @@ namespace Practika
         {
             TFunction.NextMainForm("Practika.SignInForm", this);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TFunction.NextMainForm("Practika.RegistrRunnerForm", this);
+        }
     }
 }

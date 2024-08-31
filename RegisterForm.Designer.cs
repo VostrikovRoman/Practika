@@ -47,7 +47,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 62 дня 21 час 11 минут 47 секунд ";
+            this.timer_stroke.Text = "До начала марафона 13 дней 1 час 15 минут 54 секунды ";
             // 
             // flowLayoutPanel1
             // 
@@ -91,6 +91,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Я новый участник";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // login_button
             // 

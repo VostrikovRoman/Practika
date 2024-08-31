@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -69,6 +70,54 @@ namespace Practika
             count += 10;
             count_display.Text = Count + Convert.ToString(count);
             count_box.Text = Convert.ToString(count);
+        }
+
+        private void cancel_butt_Click(object sender, EventArgs e)
+        {
+            TFunction.NextMainForm("Practika.MainForm", this);
+        }
+
+        private void pay_butt_Click(object sender, EventArgs e)
+        {
+            if (name_box.Text.Length == 0)
+            {
+                MessageBox.Show("Необходимо заполнить все поля", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (card_box.Text.Length == 0)
+            {
+                MessageBox.Show("Необходимо заполнить все поля", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (code_box.Text.Length < 19)
+            {
+                MessageBox.Show("Номер карты указан неверно", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (month_box.Text.Length < 2)
+            {
+                MessageBox.Show("Срок действия карты указан неверно", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                if (Convert.ToInt32(month_box.Text) > 12 || Convert.ToInt32(month_box.Text) == 0)
+                {
+                    MessageBox.Show("Срок действия карты указан неверно", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            if (year_box.Text.Length < 4)
+            {
+                MessageBox.Show("Срок действия карты указан неверно", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (cvc_box.Text.Length < 3)
+            {
+                MessageBox.Show("CVC указан неверно", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            TFunction.NextMainForm("Practika.MainForm", this);
         }
     }
 }

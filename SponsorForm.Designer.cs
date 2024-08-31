@@ -41,12 +41,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.card_box = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.code_box = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.month_box = new System.Windows.Forms.TextBox();
-            this.year_box = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cvc_box = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,6 +58,10 @@
             this.pay_butt = new System.Windows.Forms.Button();
             this.cancel_butt = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.code_box = new System.Windows.Forms.MaskedTextBox();
+            this.month_box = new System.Windows.Forms.MaskedTextBox();
+            this.year_box = new System.Windows.Forms.MaskedTextBox();
+            this.cvc_box = new System.Windows.Forms.MaskedTextBox();
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -82,7 +82,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 13 дней 9 часов 53 минуты 47 секунд ";
+            this.timer_stroke.Text = "До начала марафона 13 дней 2 часа 12 минут 15 секунд ";
             // 
             // label2
             // 
@@ -160,7 +160,7 @@
             // 
             this.name_box.BackColor = System.Drawing.Color.White;
             this.name_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.name_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.name_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.name_box.Location = new System.Drawing.Point(234, 3);
             this.name_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
             this.name_box.Name = "name_box";
@@ -195,14 +195,14 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(225, 34);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Карта:";
+            this.label7.Text = "Владелец карты:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // card_box
             // 
             this.card_box.BackColor = System.Drawing.Color.White;
             this.card_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.card_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.card_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.card_box.Location = new System.Drawing.Point(234, 119);
             this.card_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
             this.card_box.Name = "card_box";
@@ -219,69 +219,27 @@
             this.label11.Text = "Номер  карты:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // code_box
-            // 
-            this.code_box.BackColor = System.Drawing.Color.White;
-            this.code_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.code_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.code_box.Location = new System.Drawing.Point(234, 177);
-            this.code_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
-            this.code_box.Name = "code_box";
-            this.code_box.Size = new System.Drawing.Size(392, 35);
-            this.code_box.TabIndex = 14;
-            // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(3, 232);
+            this.label12.Location = new System.Drawing.Point(3, 235);
+            this.label12.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(225, 34);
             this.label12.TabIndex = 17;
             this.label12.Text = "Срок действия:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // month_box
-            // 
-            this.month_box.BackColor = System.Drawing.Color.White;
-            this.month_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.month_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.month_box.Location = new System.Drawing.Point(234, 235);
-            this.month_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
-            this.month_box.Name = "month_box";
-            this.month_box.Size = new System.Drawing.Size(51, 35);
-            this.month_box.TabIndex = 16;
-            // 
-            // year_box
-            // 
-            this.year_box.BackColor = System.Drawing.Color.White;
-            this.year_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.year_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.year_box.Location = new System.Drawing.Point(308, 235);
-            this.year_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
-            this.year_box.Name = "year_box";
-            this.year_box.Size = new System.Drawing.Size(93, 35);
-            this.year_box.TabIndex = 20;
-            // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(3, 290);
+            this.label8.Location = new System.Drawing.Point(3, 293);
+            this.label8.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(225, 34);
             this.label8.TabIndex = 19;
             this.label8.Text = "CVC:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cvc_box
-            // 
-            this.cvc_box.BackColor = System.Drawing.Color.White;
-            this.cvc_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cvc_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cvc_box.Location = new System.Drawing.Point(234, 293);
-            this.cvc_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
-            this.cvc_box.Name = "cvc_box";
-            this.cvc_box.Size = new System.Drawing.Size(76, 35);
-            this.cvc_box.TabIndex = 18;
             // 
             // flowLayoutPanel3
             // 
@@ -424,6 +382,7 @@
             this.pay_butt.TabIndex = 22;
             this.pay_butt.Text = "Заплатить";
             this.pay_butt.UseVisualStyleBackColor = false;
+            this.pay_butt.Click += new System.EventHandler(this.pay_butt_Click);
             // 
             // cancel_butt
             // 
@@ -437,11 +396,58 @@
             this.cancel_butt.TabIndex = 23;
             this.cancel_butt.Text = "Отмена";
             this.cancel_butt.UseVisualStyleBackColor = false;
+            this.cancel_butt.Click += new System.EventHandler(this.cancel_butt_Click);
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // code_box
+            // 
+            this.code_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.code_box.Location = new System.Drawing.Point(234, 177);
+            this.code_box.Mask = "0000 0000 0000 0000";
+            this.code_box.Name = "code_box";
+            this.code_box.PromptChar = ' ';
+            this.code_box.Size = new System.Drawing.Size(392, 35);
+            this.code_box.TabIndex = 22;
+            // 
+            // month_box
+            // 
+            this.month_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.month_box.Location = new System.Drawing.Point(234, 235);
+            this.month_box.Margin = new System.Windows.Forms.Padding(3, 20, 15, 3);
+            this.month_box.Mask = "00";
+            this.month_box.Name = "month_box";
+            this.month_box.PromptChar = ' ';
+            this.month_box.Size = new System.Drawing.Size(50, 35);
+            this.month_box.TabIndex = 23;
+            this.month_box.ValidatingType = typeof(System.DateTime);
+            // 
+            // year_box
+            // 
+            this.year_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.year_box.Location = new System.Drawing.Point(302, 235);
+            this.year_box.Margin = new System.Windows.Forms.Padding(3, 20, 15, 3);
+            this.year_box.Mask = "0000";
+            this.year_box.Name = "year_box";
+            this.year_box.PromptChar = ' ';
+            this.year_box.Size = new System.Drawing.Size(133, 35);
+            this.year_box.TabIndex = 24;
+            this.year_box.ValidatingType = typeof(System.DateTime);
+            // 
+            // cvc_box
+            // 
+            this.cvc_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cvc_box.Location = new System.Drawing.Point(234, 293);
+            this.cvc_box.Margin = new System.Windows.Forms.Padding(3, 20, 15, 3);
+            this.cvc_box.Mask = "000";
+            this.cvc_box.Name = "cvc_box";
+            this.cvc_box.PromptChar = ' ';
+            this.cvc_box.Size = new System.Drawing.Size(74, 35);
+            this.cvc_box.TabIndex = 25;
+            this.cvc_box.ValidatingType = typeof(System.DateTime);
             // 
             // SponsorForm
             // 
@@ -488,12 +494,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox card_box;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox code_box;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox month_box;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox cvc_box;
-        private System.Windows.Forms.TextBox year_box;
         private System.Windows.Forms.ComboBox runner_box;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -508,5 +510,9 @@
         private System.Windows.Forms.Button cancel_butt;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox count_box;
+        private System.Windows.Forms.MaskedTextBox code_box;
+        private System.Windows.Forms.MaskedTextBox month_box;
+        private System.Windows.Forms.MaskedTextBox year_box;
+        private System.Windows.Forms.MaskedTextBox cvc_box;
     }
 }
