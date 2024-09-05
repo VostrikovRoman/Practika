@@ -147,6 +147,12 @@
     <Compile Include="SponsorForm.Designer.cs">
       <DependentUpon>SponsorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SponsorshipConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SponsorshipConfirmationForm.Designer.cs">
+      <DependentUpon>SponsorshipConfirmationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TFunction.cs" />
     <Compile Include="TimeToStart.cs" />
     <EmbeddedResource Include="AdministratorMenuForm.resx">
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SponsorForm.resx">
       <DependentUpon>SponsorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SponsorshipConfirmationForm.resx">
+      <DependentUpon>SponsorshipConfirmationForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MarathonSkillsDBDataSet.xsc">
       <DependentUpon>MarathonSkillsDBDataSet.xsd</DependentUpon>

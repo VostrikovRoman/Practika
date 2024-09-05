@@ -41,11 +41,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.card_box = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.code_box = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.month_box = new System.Windows.Forms.MaskedTextBox();
+            this.year_box = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.cvc_box = new System.Windows.Forms.MaskedTextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.charity_box = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.count_display = new System.Windows.Forms.Label();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
@@ -58,10 +62,6 @@
             this.pay_butt = new System.Windows.Forms.Button();
             this.cancel_butt = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.code_box = new System.Windows.Forms.MaskedTextBox();
-            this.month_box = new System.Windows.Forms.MaskedTextBox();
-            this.year_box = new System.Windows.Forms.MaskedTextBox();
-            this.cvc_box = new System.Windows.Forms.MaskedTextBox();
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -82,7 +82,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 13 дней 2 часа 12 минут 15 секунд ";
+            this.timer_stroke.Text = "До начала марафона 9 дней 22 часа 59 минут ";
             // 
             // label2
             // 
@@ -187,6 +187,7 @@
             this.runner_box.Name = "runner_box";
             this.runner_box.Size = new System.Drawing.Size(392, 35);
             this.runner_box.TabIndex = 21;
+            this.runner_box.SelectionChangeCommitted += new System.EventHandler(this.runner_box_SelectionChangeCommitted);
             // 
             // label7
             // 
@@ -219,6 +220,16 @@
             this.label11.Text = "Номер  карты:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // code_box
+            // 
+            this.code_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.code_box.Location = new System.Drawing.Point(234, 177);
+            this.code_box.Mask = "0000 0000 0000 0000";
+            this.code_box.Name = "code_box";
+            this.code_box.PromptChar = ' ';
+            this.code_box.Size = new System.Drawing.Size(392, 35);
+            this.code_box.TabIndex = 22;
+            // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -229,6 +240,30 @@
             this.label12.TabIndex = 17;
             this.label12.Text = "Срок действия:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // month_box
+            // 
+            this.month_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.month_box.Location = new System.Drawing.Point(234, 235);
+            this.month_box.Margin = new System.Windows.Forms.Padding(3, 20, 15, 3);
+            this.month_box.Mask = "00";
+            this.month_box.Name = "month_box";
+            this.month_box.PromptChar = ' ';
+            this.month_box.Size = new System.Drawing.Size(50, 35);
+            this.month_box.TabIndex = 23;
+            this.month_box.ValidatingType = typeof(System.DateTime);
+            // 
+            // year_box
+            // 
+            this.year_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.year_box.Location = new System.Drawing.Point(302, 235);
+            this.year_box.Margin = new System.Windows.Forms.Padding(3, 20, 15, 3);
+            this.year_box.Mask = "0000";
+            this.year_box.Name = "year_box";
+            this.year_box.PromptChar = ' ';
+            this.year_box.Size = new System.Drawing.Size(133, 35);
+            this.year_box.TabIndex = 24;
+            this.year_box.ValidatingType = typeof(System.DateTime);
             // 
             // label8
             // 
@@ -241,10 +276,22 @@
             this.label8.Text = "CVC:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // cvc_box
+            // 
+            this.cvc_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cvc_box.Location = new System.Drawing.Point(234, 293);
+            this.cvc_box.Margin = new System.Windows.Forms.Padding(3, 20, 15, 3);
+            this.cvc_box.Mask = "000";
+            this.cvc_box.Name = "cvc_box";
+            this.cvc_box.PromptChar = ' ';
+            this.cvc_box.Size = new System.Drawing.Size(74, 35);
+            this.cvc_box.TabIndex = 25;
+            this.cvc_box.ValidatingType = typeof(System.DateTime);
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.label4);
-            this.flowLayoutPanel3.Controls.Add(this.label9);
+            this.flowLayoutPanel3.Controls.Add(this.charity_box);
             this.flowLayoutPanel3.Controls.Add(this.label10);
             this.flowLayoutPanel3.Controls.Add(this.count_display);
             this.flowLayoutPanel3.Controls.Add(this.flowLayoutPanel5);
@@ -264,16 +311,16 @@
             this.label4.Text = "Благотворительность";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // charity_box
             // 
-            this.label9.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(3, 57);
-            this.label9.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(651, 35);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Фонд кошек";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charity_box.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.charity_box.Location = new System.Drawing.Point(3, 57);
+            this.charity_box.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
+            this.charity_box.Name = "charity_box";
+            this.charity_box.Size = new System.Drawing.Size(651, 35);
+            this.charity_box.TabIndex = 11;
+            this.charity_box.Text = "Фонд кошек";
+            this.charity_box.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
@@ -319,6 +366,7 @@
             // 
             // minus_butt
             // 
+            this.minus_butt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.minus_butt.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.minus_butt.Location = new System.Drawing.Point(209, 3);
             this.minus_butt.Name = "minus_butt";
@@ -343,6 +391,7 @@
             // 
             // plus_butt
             // 
+            this.plus_butt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.plus_butt.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.plus_butt.Location = new System.Drawing.Point(394, 3);
             this.plus_butt.Name = "plus_butt";
@@ -373,6 +422,7 @@
             // pay_butt
             // 
             this.pay_butt.BackColor = global::Practika.Properties.Settings.Default.ButtonExit;
+            this.pay_butt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pay_butt.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "ButtonExit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.pay_butt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pay_butt.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -387,6 +437,7 @@
             // cancel_butt
             // 
             this.cancel_butt.BackColor = global::Practika.Properties.Settings.Default.ButtonExit;
+            this.cancel_butt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel_butt.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "ButtonExit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cancel_butt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel_butt.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -402,52 +453,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // code_box
-            // 
-            this.code_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.code_box.Location = new System.Drawing.Point(234, 177);
-            this.code_box.Mask = "0000 0000 0000 0000";
-            this.code_box.Name = "code_box";
-            this.code_box.PromptChar = ' ';
-            this.code_box.Size = new System.Drawing.Size(392, 35);
-            this.code_box.TabIndex = 22;
-            // 
-            // month_box
-            // 
-            this.month_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.month_box.Location = new System.Drawing.Point(234, 235);
-            this.month_box.Margin = new System.Windows.Forms.Padding(3, 20, 15, 3);
-            this.month_box.Mask = "00";
-            this.month_box.Name = "month_box";
-            this.month_box.PromptChar = ' ';
-            this.month_box.Size = new System.Drawing.Size(50, 35);
-            this.month_box.TabIndex = 23;
-            this.month_box.ValidatingType = typeof(System.DateTime);
-            // 
-            // year_box
-            // 
-            this.year_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.year_box.Location = new System.Drawing.Point(302, 235);
-            this.year_box.Margin = new System.Windows.Forms.Padding(3, 20, 15, 3);
-            this.year_box.Mask = "0000";
-            this.year_box.Name = "year_box";
-            this.year_box.PromptChar = ' ';
-            this.year_box.Size = new System.Drawing.Size(133, 35);
-            this.year_box.TabIndex = 24;
-            this.year_box.ValidatingType = typeof(System.DateTime);
-            // 
-            // cvc_box
-            // 
-            this.cvc_box.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cvc_box.Location = new System.Drawing.Point(234, 293);
-            this.cvc_box.Margin = new System.Windows.Forms.Padding(3, 20, 15, 3);
-            this.cvc_box.Mask = "000";
-            this.cvc_box.Name = "cvc_box";
-            this.cvc_box.PromptChar = ' ';
-            this.cvc_box.Size = new System.Drawing.Size(74, 35);
-            this.cvc_box.TabIndex = 25;
-            this.cvc_box.ValidatingType = typeof(System.DateTime);
             // 
             // SponsorForm
             // 
@@ -497,7 +502,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox runner_box;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label charity_box;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label count_display;
         private System.Windows.Forms.Button minus_butt;

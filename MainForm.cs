@@ -16,6 +16,7 @@ namespace Practika
         {
             InitializeComponent();
             label2.Text = "Москва, Россия\nсреда 21 октября 2016";
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)

@@ -77,6 +77,7 @@ namespace Practika
             TFunction.NextMainForm("Practika.MainForm", this);
         }
 
+
         private void pay_butt_Click(object sender, EventArgs e)
         {
             if (name_box.Text.Length == 0)
@@ -117,7 +118,13 @@ namespace Practika
                 MessageBox.Show("CVC указан неверно", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            TFunction.NextMainForm("Practika.MainForm", this);
+            TFunction.NextMainForm("Practika.SponsorshipConfirmationForm", this);
+        }
+
+        private void runner_box_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            TFunction.runner_id = runner_box.ValueMember;
+            MessageBox.Show("" + TFunction.runner_id);
         }
     }
 }

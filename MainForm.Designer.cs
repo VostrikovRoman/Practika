@@ -70,7 +70,7 @@
             // timer_stroke
             // 
             this.timer_stroke.Size = new System.Drawing.Size(1509, 65);
-            this.timer_stroke.Text = "До начала марафона 16 дней 19 часов 40 минут 37 секунд ";
+            this.timer_stroke.Text = "До начала марафона 10 дней 12 часов 1 минута 10 секунд ";
             // 
             // timerPanel
             // 
@@ -173,7 +173,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1509, 820);
             this.Controls.Add(this.login_button);
