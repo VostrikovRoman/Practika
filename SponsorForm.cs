@@ -24,7 +24,17 @@ namespace Practika
 
         private void SponsorForm_Load(object sender, EventArgs e)
         {
+            TFunction.runner_id = Convert.ToInt32(runner_box.SelectedValue);
+            string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
+            string SQL = "SELECT Charity.CharityName FROM Runner JOIN Registration ON Runner.RunnerId = Registration.RunnerId JOIN Charity ON Registration.CharityId = Charity.CharityId" +
+                " WHERE Runner.RunnerId = " + TFunction.runner_id + "";
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(SQL, connection);
+                charity_box.Text = Convert.ToString(command.ExecuteScalar());
 
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -123,8 +133,17 @@ namespace Practika
 
         private void runner_box_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            TFunction.runner_id = runner_box.ValueMember;
-            MessageBox.Show("" + TFunction.runner_id);
+            TFunction.runner_id = Convert.ToInt32(runner_box.SelectedValue);
+            string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
+            string SQL = "SELECT Charity.CharityName FROM Runner JOIN Registration ON Runner.RunnerId = Registration.RunnerId JOIN Charity ON Registration.CharityId = Charity.CharityId" +
+                " WHERE Runner.RunnerId = " + TFunction.runner_id + "";
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(SQL, connection);
+                charity_box.Text = Convert.ToString(command.ExecuteScalar());
+                
+            }
         }
     }
 }

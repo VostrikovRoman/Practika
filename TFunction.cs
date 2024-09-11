@@ -67,12 +67,12 @@ namespace Practika
                 "JOIN Users ON Runner.Email = Users.Email " +
                 "JOIN Country ON Runner.CountryCode = Country.CountryCode " +
                 "JOIN Registration ON Runner.RunnerId = Registration.RunnerId " +
-                "JOIN RegistrationEvent ON Registration.RegistrationId = RegistrationEvent.RegistrationId";
+                "JOIN RegistrationEvent ON Registration.RegistrationId = RegistrationEvent.RegistrationId WHERE Runner.CountryCode = 'VIE'";
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(SQL, connection);
-            
+
                 DataTable table_runner = new DataTable();
                 adapter.Fill(table_runner);
                 runner_box.DataSource = table_runner;
@@ -81,7 +81,7 @@ namespace Practika
             }
         }
 
-        static public string runner_id;
+        static public int runner_id;
 
         static public int CheckEmail(string email_box)
         {
