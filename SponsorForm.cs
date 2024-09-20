@@ -128,6 +128,7 @@ namespace Practika
                 MessageBox.Show("CVC указан неверно", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            TFunction.count_charity = count_box.Text;
             TFunction.NextMainForm("Practika.SponsorshipConfirmationForm", this);
         }
 

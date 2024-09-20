@@ -30,11 +30,11 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.minus_butt = new System.Windows.Forms.Button();
+            this.name_box = new System.Windows.Forms.Label();
+            this.charity_box = new System.Windows.Forms.Label();
+            this.count_box = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.minus_butt = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -51,7 +51,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 9 дней 23 часа 21 минута 35 секунд ";
+            this.timer_stroke.Text = "До начала марафона 2 дня 5 часов 32 минуты 30 секунд ";
             // 
             // label2
             // 
@@ -66,9 +66,9 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.label3);
-            this.flowLayoutPanel1.Controls.Add(this.label4);
-            this.flowLayoutPanel1.Controls.Add(this.label5);
+            this.flowLayoutPanel1.Controls.Add(this.name_box);
+            this.flowLayoutPanel1.Controls.Add(this.charity_box);
+            this.flowLayoutPanel1.Controls.Add(this.count_box);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -77,37 +77,45 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1509, 463);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
-            // label3
+            // name_box
             // 
-            this.label3.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1494, 92);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Имя Фамилия (номер) из Страна";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.name_box.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.name_box.Location = new System.Drawing.Point(3, 0);
+            this.name_box.Name = "name_box";
+            this.name_box.Size = new System.Drawing.Size(1494, 92);
+            this.name_box.TabIndex = 9;
+            this.name_box.Text = "Имя Фамилия (номер) из Страна";
+            this.name_box.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // charity_box
             // 
-            this.label4.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(3, 92);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1494, 87);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Фонд кошек";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charity_box.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.charity_box.Location = new System.Drawing.Point(3, 92);
+            this.charity_box.Name = "charity_box";
+            this.charity_box.Size = new System.Drawing.Size(1494, 87);
+            this.charity_box.TabIndex = 10;
+            this.charity_box.Text = "Фонд кошек";
+            this.charity_box.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // count_box
             // 
-            this.label5.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::Practika.Properties.Settings.Default, "HeaderPanelBackground", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.label5.Font = new System.Drawing.Font("Arial", 75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = global::Practika.Properties.Settings.Default.HeaderPanelBackground;
-            this.label5.Location = new System.Drawing.Point(3, 179);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1494, 132);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "$0";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.count_box.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::Practika.Properties.Settings.Default, "HeaderPanelBackground", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.count_box.Font = new System.Drawing.Font("Arial", 75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.count_box.ForeColor = global::Practika.Properties.Settings.Default.HeaderPanelBackground;
+            this.count_box.Location = new System.Drawing.Point(3, 179);
+            this.count_box.Name = "count_box";
+            this.count_box.Size = new System.Drawing.Size(1494, 132);
+            this.count_box.TabIndex = 11;
+            this.count_box.Text = "$0";
+            this.count_box.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.minus_butt);
+            this.panel1.Location = new System.Drawing.Point(3, 314);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1506, 100);
+            this.panel1.TabIndex = 24;
             // 
             // minus_butt
             // 
@@ -122,17 +130,9 @@
             this.minus_butt.UseVisualStyleBackColor = true;
             this.minus_butt.Click += new System.EventHandler(this.minus_butt_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.minus_butt);
-            this.panel1.Location = new System.Drawing.Point(3, 314);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1506, 100);
-            this.panel1.TabIndex = 24;
-            // 
             // SponsorshipConfirmationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1509, 820);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -158,9 +158,9 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label name_box;
+        private System.Windows.Forms.Label charity_box;
+        private System.Windows.Forms.Label count_box;
         private System.Windows.Forms.Button minus_butt;
         private System.Windows.Forms.Panel panel1;
     }

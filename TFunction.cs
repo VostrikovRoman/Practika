@@ -67,7 +67,7 @@ namespace Practika
                 "JOIN Users ON Runner.Email = Users.Email " +
                 "JOIN Country ON Runner.CountryCode = Country.CountryCode " +
                 "JOIN Registration ON Runner.RunnerId = Registration.RunnerId " +
-                "JOIN RegistrationEvent ON Registration.RegistrationId = RegistrationEvent.RegistrationId WHERE Runner.CountryCode = 'VIE'";
+                "JOIN RegistrationEvent ON Registration.RegistrationId = RegistrationEvent.RegistrationId WHERE Runner.CountryCode = 'RUS'";
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();
@@ -82,6 +82,7 @@ namespace Practika
         }
 
         static public int runner_id;
+        static public string count_charity;
 
         static public int CheckEmail(string email_box)
         {
