@@ -187,6 +187,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
@@ -230,8 +231,57 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="logo_charity\" />
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\arise-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\aves-do-brazil-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\clara-santos-oliveira-institute-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\conquer-cancer-brazil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\diabetes-brazil-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\heart-health-sao-paulo-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\human-rights-centre-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\oxfam-international-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\querstadtein-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\save-the-children-fund-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\stay-pumped-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\the-red-cross-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\upbeat-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_charity\wwsm-rescue-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

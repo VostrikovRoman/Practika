@@ -42,7 +42,6 @@ namespace Practika
                 SqlDataReader Reader_fill = command.ExecuteReader();
                 string charity_name = "";
                 string runner = "";
-                int count = 0;
                 if (Reader_fill.HasRows)
                 {
                     while (Reader_fill.Read())

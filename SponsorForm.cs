@@ -146,5 +146,35 @@ namespace Practika
                 
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            info_panel.Visible = true;
+            string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
+            string SQL = "SELECT Charity.CharityName, Charity.CharityDescription, Charity.CharityLogo FROM Runner JOIN Registration ON Runner.RunnerId = Registration.RunnerId JOIN Charity ON Registration.CharityId = Charity.CharityId" +
+                " WHERE Runner.RunnerId = " + TFunction.runner_id + "";
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(SQL, connection);
+                SqlDataReader Reader_fill = command.ExecuteReader();
+                if (Reader_fill.HasRows)
+                {
+                    while (Reader_fill.Read())
+                    {
+                        charity_name.Text = Convert.ToString(Reader_fill.GetValue(0));
+                        charity_info.Text = Convert.ToString(Reader_fill.GetValue(1));
+                        charity_logo.Image = Image.FromFile(@"C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\logo_charity\" + Convert.ToString(Reader_fill.GetValue(2)));
+                    }
+                }
+                Reader_fill.Close();
+
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            info_panel.Visible = false;
+        }
     }
 }
