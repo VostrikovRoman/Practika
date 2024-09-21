@@ -64,7 +64,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 16 дней 13 часов 15 минут 23 секунды ";
+            this.timer_stroke.Text = "До начала марафона 357 дней 10 часов 21 минута 2 секунды ";
             // 
             // label2
             // 
@@ -278,7 +278,7 @@
             this.sign_in_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sign_in_button.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "ButtonExit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.sign_in_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sign_in_button.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sign_in_button.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sign_in_button.Location = new System.Drawing.Point(519, 660);
             this.sign_in_button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.sign_in_button.Name = "sign_in_button";
@@ -295,7 +295,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "ButtonExit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(785, 660);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.button2.Name = "button2";

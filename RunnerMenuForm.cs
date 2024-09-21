@@ -21,5 +21,20 @@ namespace Practika
         {
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            contacts_panel.Visible = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            contacts_panel.Visible = true; 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TFunction.NextMainForm("Practika.RegisterEventForm", this);
+        }
     }
 }

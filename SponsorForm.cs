@@ -42,31 +42,20 @@ namespace Practika
             TFunction.NextMainForm("Practika.MainForm", this);
         }
 
-        private int CheckCount (string count)
-        {
-            string pattern = @"^[0-9]{0,}$";
-            if (count.Length == 0)
-                return 0;
-            else
-                if (Regex.IsMatch(count, pattern) == true)
-                    return Convert.ToInt32(count);
-            
-            return 0;
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             string Count = "$";
-            Count += Convert.ToString(CheckCount(count_box.Text));
+            Count += Convert.ToString(TFunction.CheckCount(count_box.Text));
                         
             count_display.Text = Count;
-            count_box.Text = Convert.ToString(CheckCount(count_box.Text));
+            count_box.Text = Convert.ToString(TFunction.CheckCount(count_box.Text));
         }
 
         private void minus_butt_Click(object sender, EventArgs e)
         {
             string Count = "$";
-            int count = CheckCount(count_box.Text);
+            int count = TFunction.CheckCount(count_box.Text);
             if (count >= 10)
                 count -= 10;
             count_display.Text = Count + Convert.ToString(count);
@@ -76,7 +65,7 @@ namespace Practika
         private void plus_butt_Click(object sender, EventArgs e)
         {
             string Count = "$";
-            int count = CheckCount(count_box.Text);
+            int count = TFunction.CheckCount(count_box.Text);
             count += 10;
             count_display.Text = Count + Convert.ToString(count);
             count_box.Text = Convert.ToString(count);
@@ -149,27 +138,7 @@ namespace Practika
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            info_panel.Visible = true;
-            string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
-            string SQL = "SELECT Charity.CharityName, Charity.CharityDescription, Charity.CharityLogo FROM Runner JOIN Registration ON Runner.RunnerId = Registration.RunnerId JOIN Charity ON Registration.CharityId = Charity.CharityId" +
-                " WHERE Runner.RunnerId = " + TFunction.runner_id + "";
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(SQL, connection);
-                SqlDataReader Reader_fill = command.ExecuteReader();
-                if (Reader_fill.HasRows)
-                {
-                    while (Reader_fill.Read())
-                    {
-                        charity_name.Text = Convert.ToString(Reader_fill.GetValue(0));
-                        charity_info.Text = Convert.ToString(Reader_fill.GetValue(1));
-                        charity_logo.Image = Image.FromFile(@"C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\logo_charity\" + Convert.ToString(Reader_fill.GetValue(2)));
-                    }
-                }
-                Reader_fill.Close();
-
-            }
+            TFunction.LoadInfoCharity(info_panel, "Runner.RunnerId", Convert.ToString(TFunction.runner_id), charity_name, charity_info, charity_logo);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)

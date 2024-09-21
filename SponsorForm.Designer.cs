@@ -49,6 +49,9 @@
             this.cvc_box = new System.Windows.Forms.MaskedTextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.charity_box = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.count_display = new System.Windows.Forms.Label();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
@@ -60,33 +63,30 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pay_butt = new System.Windows.Forms.Button();
             this.cancel_butt = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.info_panel = new System.Windows.Forms.Panel();
-            this.charity_box = new System.Windows.Forms.Label();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.charity_name = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.charity_info = new System.Windows.Forms.Label();
             this.charity_logo = new System.Windows.Forms.PictureBox();
+            this.charity_info = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.flowLayoutPanel5.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.info_panel.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.charity_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -99,7 +99,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 358 дней 11 часов 53 минуты 45 секунд ";
+            this.timer_stroke.Text = "До начала марафона 357 дней 8 часов 42 минуты 16 секунд ";
             // 
             // label2
             // 
@@ -135,7 +135,9 @@
             // 
             // label3
             // 
+            this.label3.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::Practika.Properties.Settings.Default, "HeaderPanelBackground", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.label3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = global::Practika.Properties.Settings.Default.HeaderPanelBackground;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(651, 57);
@@ -323,7 +325,9 @@
             // 
             // label4
             // 
+            this.label4.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::Practika.Properties.Settings.Default, "HeaderPanelBackground", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.label4.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = global::Practika.Properties.Settings.Default.HeaderPanelBackground;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(651, 57);
@@ -331,9 +335,43 @@
             this.label4.Text = "Благотворительность";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(3, 60);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 27;
+            this.pictureBox3.TabStop = false;
+            // 
+            // charity_box
+            // 
+            this.charity_box.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.charity_box.Location = new System.Drawing.Point(36, 57);
+            this.charity_box.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
+            this.charity_box.Name = "charity_box";
+            this.charity_box.Size = new System.Drawing.Size(580, 35);
+            this.charity_box.TabIndex = 11;
+            this.charity_box.Text = "Фонд кошек";
+            this.charity_box.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::Practika.Properties.Resources.information;
+            this.pictureBox2.Location = new System.Drawing.Point(622, 60);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 26;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // label10
             // 
+            this.label10.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::Practika.Properties.Settings.Default, "HeaderPanelBackground", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.label10.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = global::Practika.Properties.Settings.Default.HeaderPanelBackground;
             this.label10.Location = new System.Drawing.Point(3, 122);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(651, 49);
@@ -458,6 +496,14 @@
             this.cancel_butt.UseVisualStyleBackColor = false;
             this.cancel_butt.Click += new System.EventHandler(this.cancel_butt_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(3, 473);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
@@ -474,17 +520,6 @@
             this.info_panel.TabIndex = 9;
             this.info_panel.Visible = false;
             // 
-            // charity_box
-            // 
-            this.charity_box.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.charity_box.Location = new System.Drawing.Point(36, 57);
-            this.charity_box.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
-            this.charity_box.Name = "charity_box";
-            this.charity_box.Size = new System.Drawing.Size(580, 35);
-            this.charity_box.TabIndex = 11;
-            this.charity_box.Text = "Фонд кошек";
-            this.charity_box.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // flowLayoutPanel7
             // 
             this.flowLayoutPanel7.AutoScroll = true;
@@ -499,7 +534,7 @@
             // 
             // charity_name
             // 
-            this.charity_name.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.charity_name.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.charity_name.Location = new System.Drawing.Point(3, 0);
             this.charity_name.Name = "charity_name";
             this.charity_name.Size = new System.Drawing.Size(689, 44);
@@ -513,15 +548,6 @@
             this.panel3.Size = new System.Drawing.Size(233, 100);
             this.panel3.TabIndex = 13;
             // 
-            // charity_info
-            // 
-            this.charity_info.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.charity_info.Location = new System.Drawing.Point(3, 250);
-            this.charity_info.Name = "charity_info";
-            this.charity_info.Size = new System.Drawing.Size(674, 328);
-            this.charity_info.TabIndex = 14;
-            this.charity_info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // charity_logo
             // 
             this.charity_logo.Location = new System.Drawing.Point(242, 47);
@@ -530,6 +556,15 @@
             this.charity_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.charity_logo.TabIndex = 12;
             this.charity_logo.TabStop = false;
+            // 
+            // charity_info
+            // 
+            this.charity_info.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.charity_info.Location = new System.Drawing.Point(3, 250);
+            this.charity_info.Name = "charity_info";
+            this.charity_info.Size = new System.Drawing.Size(674, 328);
+            this.charity_info.TabIndex = 14;
+            this.charity_info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox4
             // 
@@ -542,35 +577,6 @@
             this.pictureBox4.TabIndex = 27;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(3, 60);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::Practika.Properties.Resources.information;
-            this.pictureBox2.Location = new System.Drawing.Point(622, 60);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 26;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 473);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
             // 
             // SponsorForm
             // 
@@ -597,16 +603,16 @@
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
             this.flowLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.info_panel.ResumeLayout(false);
             this.flowLayoutPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.charity_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

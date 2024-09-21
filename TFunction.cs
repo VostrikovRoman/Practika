@@ -7,11 +7,13 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
 using System.Text.RegularExpressions;
+using System.Drawing;
 
 namespace Practika
 {
     static class TFunction
     {
+        //Переход между формами
         static public void NextMainForm(string TypeNextMainForm, Form CurrentForm)
         {
             Type T = Type.GetType(TypeNextMainForm);
@@ -22,42 +24,26 @@ namespace Practika
             CurrentForm.Dispose();
         }
 
-        static public void LoadCountry(ComboBox country_box)
+        //Выгрузка списка в comboBox
+        static public void LoadComboBox(ComboBox box, string name_table, string display_member, string value_member)
         {
             string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
-            string SQL = "SELECT * FROM Country";
+            string SQL = "SELECT * FROM " + name_table;
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(SQL, connection);
 
-                DataTable table_country = new DataTable();
-                adapter.Fill(table_country);
-                country_box.DataSource = table_country;
-                country_box.DisplayMember = "CountryName";
-                country_box.ValueMember = "CountryCode";
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                box.DataSource = table;
+                box.DisplayMember = display_member;
+                box.ValueMember = value_member;
 
             }
         }
 
-        static public void LoadGender(ComboBox gender_box)
-        {
-            string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
-            string SQL = "SELECT * FROM Gender";
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(SQL, connection);
-
-                DataTable table_gender = new DataTable();
-                adapter.Fill(table_gender);
-                gender_box.DataSource = table_gender;
-                gender_box.DisplayMember = "Gender";
-                gender_box.ValueMember = "Gender";
-
-            }
-        }
-
+        //Выгрузка информации о зарегистрированных бегунах (имя, фамилия, номер, страна)
         static public void LoadRunners(ComboBox runner_box)
         {
             string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
@@ -84,6 +70,7 @@ namespace Practika
         static public int runner_id;
         static public string count_charity;
 
+        //Валидация почты
         static public int CheckEmail(string email_box)
         {
             string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
@@ -108,6 +95,7 @@ namespace Practika
             }
         }
 
+        //Валидация пароля
         static public int CheckPassword(string password_box, string retry_password_box)
         {
             int numbers_count = 0;
@@ -140,6 +128,7 @@ namespace Practika
             return 1;
         }
 
+        //Валидация возраста
         static public int CheckAge (DateTime date_box)
         {
             int diff_age = DateTime.Now.Year - date_box.Year;
@@ -154,5 +143,43 @@ namespace Practika
             return 1;
         }
 
+        //Валидация суммы взноса
+        static public int CheckCount(string count)
+        {
+            string pattern = @"^[0-9]{0,}$";
+            if (count.Length == 0)
+                return 0;
+            else
+                if (Regex.IsMatch(count, pattern) == true)
+                return Convert.ToInt32(count);
+
+            return 0;
+        }
+
+        //Выгрузка информации о благотворительной организации на всплывающее меню
+        static public void LoadInfoCharity(Panel panel, string rules, string parameter, Label charity_name, Label charity_info, PictureBox charity_logo)
+        {
+            panel.Visible = true;
+            string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
+            string SQL = "SELECT Charity.CharityName, Charity.CharityDescription, Charity.CharityLogo FROM Runner JOIN Registration ON Runner.RunnerId = Registration.RunnerId JOIN Charity ON Registration.CharityId = Charity.CharityId" +
+                " WHERE " + rules + " = '" + parameter + "'";
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(SQL, connection);
+                SqlDataReader Reader_fill = command.ExecuteReader();
+                if (Reader_fill.HasRows)
+                {
+                    while (Reader_fill.Read())
+                    {
+                        charity_name.Text = Convert.ToString(Reader_fill.GetValue(0));
+                        charity_info.Text = Convert.ToString(Reader_fill.GetValue(1));
+                        charity_logo.Image = Image.FromFile(@"C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\logo_charity\" + Convert.ToString(Reader_fill.GetValue(2)));
+                    }
+                }
+                Reader_fill.Close();
+
+            }
+        }
     }
 }
