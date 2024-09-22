@@ -16,7 +16,10 @@ namespace Practika
         {
             InitializeComponent();
             timer1.Start();
+            radioButton1.Checked = true;
         }
+
+        private int final_cost = 0;
 
         private void RegisterEventForm_Load(object sender, EventArgs e)
         {
@@ -48,9 +51,39 @@ namespace Practika
             TFunction.NextMainForm("Practika.RunnerMenuForm", this);
         }
 
+        private int RaceKitOption()
+        {
+            int cost = 0;
+
+            if (radioButton2.Checked)
+                cost = 20;
+            else if (radioButton3.Checked)
+                cost = 45;
+
+            return cost;
+        }
+
+        private int TypeMarathon()
+        {
+            int cost = 0;
+
+            if (checkBox1.Checked)
+                cost += 145;
+            if (checkBox2.Checked)
+                cost += 75;
+            if (checkBox3.Checked)
+                cost += 20;
+
+            return cost;
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             count_box.Text = Convert.ToString(TFunction.CheckCount(count_box.Text));
+            final_cost = RaceKitOption() + TypeMarathon();
+            
+            count_display.Text = "$" + Convert.ToString(final_cost);
         }
+
     }
 }

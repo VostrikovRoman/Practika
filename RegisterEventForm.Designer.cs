@@ -51,6 +51,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.count_display = new System.Windows.Forms.Label();
             this.info_panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.charity_name = new System.Windows.Forms.Label();
@@ -58,13 +65,6 @@
             this.charity_logo = new System.Windows.Forms.PictureBox();
             this.charity_info = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.count_display = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
@@ -92,7 +92,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 357 дней 10 часов 1 минута 14 секунд ";
+            this.timer_stroke.Text = "До начала марафона 356 дней 17 часов 37 минут 5 секунд ";
             // 
             // label2
             // 
@@ -364,6 +364,89 @@
             this.radioButton1.Text = "Вариант A ($0):";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(196, 0);
+            this.label8.Margin = new System.Windows.Forms.Padding(0, 0, 3, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(253, 53);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Номер бегуна + RFID браслет.";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton2.Location = new System.Drawing.Point(3, 71);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(193, 27);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Вариант B ($20):";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(196, 68);
+            this.label9.Margin = new System.Windows.Forms.Padding(0, 0, 3, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(253, 53);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Вариант A + бейсболка + бутылка воды.";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton3.Location = new System.Drawing.Point(3, 139);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(193, 27);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Вариант C ($45):";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(196, 136);
+            this.label10.Margin = new System.Windows.Forms.Padding(0, 0, 3, 15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(253, 53);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Вариант B + футболка + сувенирный буклет.";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label11
+            // 
+            this.label11.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::Practika.Properties.Settings.Default, "HeaderPanelBackground", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.label11.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = global::Practika.Properties.Settings.Default.HeaderPanelBackground;
+            this.label11.Location = new System.Drawing.Point(3, 318);
+            this.label11.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(689, 54);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Регистрационный взнос";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // count_display
+            // 
+            this.count_display.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::Practika.Properties.Settings.Default, "HeaderPanelBackground", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.count_display.Font = new System.Drawing.Font("Arial", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.count_display.ForeColor = global::Practika.Properties.Settings.Default.HeaderPanelBackground;
+            this.count_display.Location = new System.Drawing.Point(3, 382);
+            this.count_display.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+            this.count_display.Name = "count_display";
+            this.count_display.Size = new System.Drawing.Size(651, 74);
+            this.count_display.TabIndex = 17;
+            this.count_display.Text = "$0";
+            this.count_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // info_panel
             // 
             this.info_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -432,89 +515,6 @@
             this.pictureBox4.TabIndex = 27;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton2.Location = new System.Drawing.Point(3, 71);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(193, 27);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Вариант B ($20):";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton3.Location = new System.Drawing.Point(3, 139);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(193, 27);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Вариант C ($45):";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(196, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(0, 0, 3, 15);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(253, 53);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Номер бегуна + RFID браслет.";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(196, 68);
-            this.label9.Margin = new System.Windows.Forms.Padding(0, 0, 3, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(253, 53);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Вариант A + бейсболка + бутылка воды.";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(196, 136);
-            this.label10.Margin = new System.Windows.Forms.Padding(0, 0, 3, 15);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(253, 53);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Вариант B + футболка + сувенирный буклет.";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label11
-            // 
-            this.label11.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::Practika.Properties.Settings.Default, "HeaderPanelBackground", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.label11.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = global::Practika.Properties.Settings.Default.HeaderPanelBackground;
-            this.label11.Location = new System.Drawing.Point(3, 318);
-            this.label11.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(689, 54);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Регистрационный взнос";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // count_display
-            // 
-            this.count_display.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::Practika.Properties.Settings.Default, "HeaderPanelBackground", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.count_display.Font = new System.Drawing.Font("Arial", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.count_display.ForeColor = global::Practika.Properties.Settings.Default.HeaderPanelBackground;
-            this.count_display.Location = new System.Drawing.Point(3, 382);
-            this.count_display.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
-            this.count_display.Name = "count_display";
-            this.count_display.Size = new System.Drawing.Size(651, 74);
-            this.count_display.TabIndex = 17;
-            this.count_display.Text = "$0";
-            this.count_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer1
             // 
