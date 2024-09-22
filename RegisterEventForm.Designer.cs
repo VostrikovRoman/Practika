@@ -82,8 +82,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
+            // topPanel
+            // 
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2);
+            // 
             // button1
             // 
+            this.button1.Location = new System.Drawing.Point(24, 26);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // title_form
@@ -92,7 +97,14 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 356 дней 17 часов 37 минут 5 секунд ";
+            this.timer_stroke.Size = new System.Drawing.Size(1509, 44);
+            this.timer_stroke.Text = "До начала марафона 356 дней 17 часов 8 минут 56 секунд ";
+            // 
+            // timerPanel
+            // 
+            this.timerPanel.Location = new System.Drawing.Point(0, 776);
+            this.timerPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.timerPanel.Size = new System.Drawing.Size(1509, 44);
             // 
             // label2
             // 
@@ -526,18 +538,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1509, 820);
+            this.Controls.Add(this.info_panel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.info_panel);
             this.Name = "RegisterEventForm";
             this.Text = "Maratho Skills 2016 - Register for an event";
             this.Load += new System.EventHandler(this.RegisterEventForm_Load);
-            this.Controls.SetChildIndex(this.info_panel, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
             this.Controls.SetChildIndex(this.timerPanel, 0);
             this.Controls.SetChildIndex(this.topPanel, 0);
             this.Controls.SetChildIndex(this.title_form, 0);
+            this.Controls.SetChildIndex(this.info_panel, 0);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.timerPanel.ResumeLayout(false);

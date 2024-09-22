@@ -43,7 +43,17 @@ namespace Practika
 
         private void registr_button_Click(object sender, EventArgs e)
         {
-
+            if (count_box.Text == "0")
+            {
+                MessageBox.Show("Необходимо ввести сумму взноса", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == false)
+            {
+                MessageBox.Show("Необходимо выбрать вид марафона", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            TFunction.NextMainForm("Practika.RegistrationConfirmationForm", this);
         }
 
         private void cancel_button_Click(object sender, EventArgs e)

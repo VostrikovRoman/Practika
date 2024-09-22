@@ -24,3 +24,4 @@ C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\o
 C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.SponsorForm.resources
 C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.SponsorshipConfirmationForm.resources
 C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.RegisterEventForm.resources
+C:\Users\rmnvs\Documents\Институт\2 курс\Практика\Practika\obj\x64\Debug\Practika.RegistrationConfirmationForm.resources
