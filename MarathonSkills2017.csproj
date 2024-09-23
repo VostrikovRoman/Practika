@@ -85,6 +85,12 @@
     <Compile Include="CoordinatorMenuForm.Designer.cs">
       <DependentUpon>CoordinatorMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditRunnerProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRunnerProfileForm.Designer.cs">
+      <DependentUpon>EditRunnerProfileForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="InfoForm.cs">
       <SubType>Form</SubType>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CoordinatorMenuForm.resx">
       <DependentUpon>CoordinatorMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRunnerProfileForm.resx">
+      <DependentUpon>EditRunnerProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>

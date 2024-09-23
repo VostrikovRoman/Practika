@@ -26,5 +26,10 @@ namespace Practika
         {
             TFunction.NextMainForm("Practika.RunnerMenuForm", this);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TFunction.NextMainForm("Practika.RunnerMenuForm", this);
+        }
     }
 }

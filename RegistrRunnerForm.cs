@@ -19,6 +19,8 @@ namespace Practika
 
             TFunction.LoadComboBox(country_box, "Country", "CountryName", "CountryCode");
             TFunction.LoadComboBox(gender_box, "Gender", "Gender", "Gender");
+
+            
         }
 
         private void RegistrRunnerForm_Load(object sender, EventArgs e)

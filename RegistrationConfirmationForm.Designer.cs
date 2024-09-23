@@ -35,13 +35,17 @@
             this.timerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
+            // button1
+            // 
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // title_form
             // 
             this.title_form.Text = "Спасибо за вашу регистрацию в качестве бегуна!";
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 356 дней 17 часов 31 секунда ";
+            this.timer_stroke.Text = "До начала марафона 356 дней 16 часов 58 минут 44 секунды ";
             // 
             // label2
             // 
@@ -60,7 +64,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(0, 258);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1509, 54);
+            this.label3.Size = new System.Drawing.Size(1509, 68);
             this.label3.TabIndex = 10;
             this.label3.Text = "С вами свяжутся по поводу оплаты.";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -73,7 +77,7 @@
             this.button3.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "Button", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(679, 357);
+            this.button3.Location = new System.Drawing.Point(679, 372);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 41);

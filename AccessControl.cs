@@ -12,6 +12,7 @@ namespace Practika
     {
         static public Runner MainUser = null;
         static public bool StatusAutorization = false;
+        static public string sign_in_email;
 
         static public int AutorizationInSystem (string Email, string Password)
         {
@@ -40,6 +41,7 @@ namespace Practika
                     else
                             if (RoleUser == "A")
                         MainUser = new Administrator(Email);
+                    sign_in_email = Email;
                     return 1;
                 }
                 else

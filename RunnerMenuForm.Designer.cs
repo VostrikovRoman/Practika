@@ -63,7 +63,7 @@
             // timer_stroke
             // 
             this.timer_stroke.Size = new System.Drawing.Size(1509, 44);
-            this.timer_stroke.Text = "До начала марафона 357 дней 11 часов 12 минут 36 секунд ";
+            this.timer_stroke.Text = "До начала марафона 355 дней 19 часов 43 минуты 16 секунд ";
             // 
             // timerPanel
             // 
@@ -132,6 +132,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "Редактирование профиля";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 

@@ -17,7 +17,7 @@ namespace Practika
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Context = new ApplicationContext(new RegisterEventForm());
+            Context = new ApplicationContext(new MainForm());
             Application.Run(Context);
         }
     }
