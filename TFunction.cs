@@ -73,6 +73,18 @@ namespace Practika
         //Валидация почты
         static public int CheckEmail(string email_box)
         {
+            string pattern = @"^[A-Za-z]+[A-Za-z0-9\-_][A-Za-z0-9]+@[A-Za-z]{2,}\.[A-Za-z]{2,6}$";
+            if (Regex.IsMatch(email_box, pattern) == false)
+            {
+                MessageBox.Show("Адрес электронной почты указан неверно", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            return 1;
+        }
+
+        //Проверка существования email
+        static public int CheckBeEmail (string email_box)
+        {
             string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
             string SQL = "SELECT * FROM Users WHERE Email = '" + email_box + "'";
             using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -83,12 +95,6 @@ namespace Practika
                 if (reader.HasRows == true)
                 {
                     MessageBox.Show("Данный адрес электронной почты уже занят", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return 0;
-                }
-                string pattern = @"^[A-Za-z]+[A-Za-z0-9\-_][A-Za-z0-9]+@[A-Za-z]{2,}\.[A-Za-z]{2,6}$";
-                if (Regex.IsMatch(email_box, pattern) == false)
-                {
-                    MessageBox.Show("Адрес электронной почты указан неверно", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return 0;
                 }
                 return 1;

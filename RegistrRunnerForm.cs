@@ -49,6 +49,8 @@ namespace Practika
                 }
                 if (TFunction.CheckEmail(email_box.Text) == 0)
                     return;
+                if (TFunction.CheckBeEmail(email_box.Text) == 0)
+                    return;
                 if (TFunction.CheckPassword(password_box.Text, retry_password_box.Text) == 0)
                     return;
                 if (TFunction.CheckAge(date_box.Value.Date) == 0)

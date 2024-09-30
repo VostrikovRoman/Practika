@@ -32,27 +32,31 @@
             this.label4 = new System.Windows.Forms.Label();
             this.email_box = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.gender_box = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.name_box = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.password_box = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.surname_box = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.country_box = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.retry_password_box = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.gender_box = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.password_box = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.date_box = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.retry_password_box = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.country_box = new System.Windows.Forms.ComboBox();
             this.save_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.timerPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // topPanel
+            // 
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             // 
             // button1
             // 
@@ -64,7 +68,14 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 355 дней 19 часов 3 минуты 56 секунд ";
+            this.timer_stroke.Size = new System.Drawing.Size(1509, 44);
+            this.timer_stroke.Text = "До начала марафона 348 дней 14 часов 5 минут 45 секунд ";
+            // 
+            // timerPanel
+            // 
+            this.timerPanel.Location = new System.Drawing.Point(0, 776);
+            this.timerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.timerPanel.Size = new System.Drawing.Size(1509, 44);
             // 
             // flowLayoutPanel1
             // 
@@ -125,27 +136,6 @@
             this.label11.Text = "Смена пароля";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(3, 170);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(225, 34);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Пол:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // gender_box
-            // 
-            this.gender_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gender_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gender_box.FormattingEnabled = true;
-            this.gender_box.Location = new System.Drawing.Point(234, 173);
-            this.gender_box.Margin = new System.Windows.Forms.Padding(3, 3, 100, 3);
-            this.gender_box.Name = "gender_box";
-            this.gender_box.Size = new System.Drawing.Size(279, 35);
-            this.gender_box.TabIndex = 18;
-            // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -167,26 +157,17 @@
             this.name_box.Size = new System.Drawing.Size(279, 35);
             this.name_box.TabIndex = 14;
             // 
-            // label3
+            // label12
             // 
-            this.label3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(616, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(225, 34);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Пароль:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // password_box
-            // 
-            this.password_box.BackColor = System.Drawing.Color.White;
-            this.password_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.password_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.password_box.Location = new System.Drawing.Point(847, 173);
-            this.password_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
-            this.password_box.Name = "password_box";
-            this.password_box.Size = new System.Drawing.Size(320, 35);
-            this.password_box.TabIndex = 10;
+            this.label12.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::Practika.Properties.Settings.Default, "GrayText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.label12.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = global::Practika.Properties.Settings.Default.GrayText;
+            this.label12.Location = new System.Drawing.Point(666, 54);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(551, 55);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Оставьте эти поля, незаполненными, если вы не хотите изменять пароль.";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -209,25 +190,66 @@
             this.surname_box.Size = new System.Drawing.Size(279, 35);
             this.surname_box.TabIndex = 16;
             // 
-            // label9
+            // label8
             // 
-            this.label9.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(3, 286);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(225, 34);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Страна:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(3, 170);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(225, 34);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Пол:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // country_box
+            // gender_box
             // 
-            this.country_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.country_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.country_box.FormattingEnabled = true;
-            this.country_box.Location = new System.Drawing.Point(234, 289);
-            this.country_box.Name = "country_box";
-            this.country_box.Size = new System.Drawing.Size(279, 35);
-            this.country_box.TabIndex = 19;
+            this.gender_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gender_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gender_box.FormattingEnabled = true;
+            this.gender_box.Location = new System.Drawing.Point(234, 173);
+            this.gender_box.Margin = new System.Windows.Forms.Padding(3, 3, 100, 3);
+            this.gender_box.Name = "gender_box";
+            this.gender_box.Size = new System.Drawing.Size(279, 35);
+            this.gender_box.TabIndex = 18;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(616, 170);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(225, 34);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Пароль:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // password_box
+            // 
+            this.password_box.BackColor = System.Drawing.Color.White;
+            this.password_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.password_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.password_box.Location = new System.Drawing.Point(847, 173);
+            this.password_box.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
+            this.password_box.Name = "password_box";
+            this.password_box.Size = new System.Drawing.Size(320, 35);
+            this.password_box.TabIndex = 10;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(3, 228);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(225, 34);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Дата рождения:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // date_box
+            // 
+            this.date_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.date_box.Location = new System.Drawing.Point(234, 231);
+            this.date_box.Margin = new System.Windows.Forms.Padding(3, 3, 100, 3);
+            this.date_box.Name = "date_box";
+            this.date_box.Size = new System.Drawing.Size(279, 35);
+            this.date_box.TabIndex = 22;
             // 
             // label5
             // 
@@ -250,36 +272,25 @@
             this.retry_password_box.Size = new System.Drawing.Size(320, 35);
             this.retry_password_box.TabIndex = 12;
             // 
-            // label10
+            // label9
             // 
-            this.label10.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(3, 228);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(225, 34);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Дата рождения:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label9.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(3, 286);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(225, 34);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Страна:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // date_box
+            // country_box
             // 
-            this.date_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.date_box.Location = new System.Drawing.Point(234, 231);
-            this.date_box.Margin = new System.Windows.Forms.Padding(3, 3, 100, 3);
-            this.date_box.Name = "date_box";
-            this.date_box.Size = new System.Drawing.Size(279, 35);
-            this.date_box.TabIndex = 22;
-            // 
-            // label12
-            // 
-            this.label12.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::Practika.Properties.Settings.Default, "GrayText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.label12.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.ForeColor = global::Practika.Properties.Settings.Default.GrayText;
-            this.label12.Location = new System.Drawing.Point(666, 54);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(551, 55);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Оставьте эти поля, незаполненными, если вы не хотите изменять пароль.";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.country_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.country_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.country_box.FormattingEnabled = true;
+            this.country_box.Location = new System.Drawing.Point(234, 289);
+            this.country_box.Name = "country_box";
+            this.country_box.Size = new System.Drawing.Size(279, 35);
+            this.country_box.TabIndex = 19;
             // 
             // save_button
             // 
@@ -289,10 +300,10 @@
             this.save_button.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "ButtonExit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save_button.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.save_button.Location = new System.Drawing.Point(534, 638);
+            this.save_button.Location = new System.Drawing.Point(534, 705);
             this.save_button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.save_button.Name = "save_button";
-            this.save_button.Size = new System.Drawing.Size(193, 42);
+            this.save_button.Size = new System.Drawing.Size(206, 42);
             this.save_button.TabIndex = 21;
             this.save_button.Text = "Сохранить";
             this.save_button.UseVisualStyleBackColor = false;
@@ -306,10 +317,10 @@
             this.cancel_button.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "ButtonExit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cancel_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel_button.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cancel_button.Location = new System.Drawing.Point(760, 638);
+            this.cancel_button.Location = new System.Drawing.Point(760, 705);
             this.cancel_button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.cancel_button.Name = "cancel_button";
-            this.cancel_button.Size = new System.Drawing.Size(157, 42);
+            this.cancel_button.Size = new System.Drawing.Size(175, 42);
             this.cancel_button.TabIndex = 22;
             this.cancel_button.Text = "Отмена";
             this.cancel_button.UseVisualStyleBackColor = false;

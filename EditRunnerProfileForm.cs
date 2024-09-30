@@ -84,13 +84,10 @@ namespace Practika
                     
                     
                     string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
-                    string SQL_1 = "UPDATE Users SET Users.FirstName = '" + name_box.Text + "', Users.LastName = '" + surname_box.Text + "', Runner.Gender = '" + gender_box.SelectedValue + "', " +
-                        "Runner.DateOfBirth = '" + date_box.Value + "', Runner.CountryCode = '" + country_box.SelectedValue + "' JOIN Runner ON Users.Email = Runner.Email " +
-                        "WHERE Email = '" + AccessControl.sign_in_email + "' ";
-                    string SQL_2 = "UPDATE Users SET Users.FirstName = '" + name_box.Text + "', Users.LastName = '" + surname_box.Text + "', Runner.Gender = '" + gender_box.SelectedValue + "', " +
-                        "Runner.DateOfBirth = '" + date_box.Value + "', Runner.CountryCode = '" + country_box.SelectedValue + "', " +
-                        "Users.Password = '" + password_box.Text + "' JOIN Runner ON Users.Email = Runner.Email " +
-                        "WHERE Email = '" + AccessControl.sign_in_email + "' ";
+                    string SQL_1 = "UPDATE Users SET Users.FirstName = '" + name_box.Text + "', Users.LastName = '" + surname_box.Text + "' WHERE Email = '" + AccessControl.sign_in_email + "' ";
+                    string SQL_2 = "UPDATE Runner SET Runner.Gender = '" + gender_box.SelectedValue + "', Runner.DateOfBirth = '" + date_box.Value + "', Runner.CountryCode = '" + 
+                        country_box.SelectedValue + "' WHERE Email = '" + AccessControl.sign_in_email + "' ";
+                    string SQL_3 = "UPDATE Users SET Users.FirstName = '" + name_box.Text + "', Users.LastName = '" + surname_box.Text + "', Users.Password = '" + password_box.Text + "' WHERE Email = '" + AccessControl.sign_in_email + "' ";
 
                     if (password_box.Text.Length != 0 || retry_password_box.Text.Length != 0)
                     {
@@ -100,8 +97,10 @@ namespace Practika
                         using (SqlConnection connection = new SqlConnection(ConnectionString))
                         {
                             connection.Open();
-                            SqlCommand command = new SqlCommand(SQL_2, connection);
+                            SqlCommand command = new SqlCommand(SQL_3, connection);
                             command.ExecuteNonQuery();
+                            SqlCommand command_2 = new SqlCommand(SQL_2, connection);
+                            command_2.ExecuteNonQuery();
                         }
                     }
                     else
@@ -111,13 +110,14 @@ namespace Practika
                             connection.Open();
                             SqlCommand command = new SqlCommand(SQL_1, connection);
                             command.ExecuteNonQuery();
-
+                            SqlCommand command_2 = new SqlCommand(SQL_2, connection);
+                            command_2.ExecuteNonQuery();
                         }
                     }
 
-                    
 
                 }
+                AccessControl.GetRights(this);
             }
             else
                 return;

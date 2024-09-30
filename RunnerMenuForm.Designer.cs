@@ -56,6 +56,10 @@
             // 
             this.topPanel.Margin = new System.Windows.Forms.Padding(2);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(24, 26);
+            // 
             // title_form
             // 
             this.title_form.Text = "Меню бегуна";
@@ -63,12 +67,12 @@
             // timer_stroke
             // 
             this.timer_stroke.Size = new System.Drawing.Size(1509, 44);
-            this.timer_stroke.Text = "До начала марафона 355 дней 19 часов 43 минуты 16 секунд ";
+            this.timer_stroke.Text = "До начала марафона 348 дней 14 часов 2 минуты 53 секунды ";
             // 
             // timerPanel
             // 
             this.timerPanel.Location = new System.Drawing.Point(0, 776);
-            this.timerPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.timerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.timerPanel.Size = new System.Drawing.Size(1509, 44);
             // 
             // flowLayoutPanel1
