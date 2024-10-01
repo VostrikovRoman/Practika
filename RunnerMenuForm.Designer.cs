@@ -67,12 +67,12 @@
             // timer_stroke
             // 
             this.timer_stroke.Size = new System.Drawing.Size(1509, 44);
-            this.timer_stroke.Text = "До начала марафона 348 дней 14 часов 2 минуты 53 секунды ";
+            this.timer_stroke.Text = "До начала марафона 348 дней 7 часов 14 минут 3 секунды ";
             // 
             // timerPanel
             // 
             this.timerPanel.Location = new System.Drawing.Point(0, 776);
-            this.timerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.timerPanel.Margin = new System.Windows.Forms.Padding(2);
             this.timerPanel.Size = new System.Drawing.Size(1509, 44);
             // 
             // flowLayoutPanel1
@@ -120,6 +120,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "Мои результаты";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 

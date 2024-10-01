@@ -57,13 +57,13 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 62 дня 23 часа 59 минут 26 секунд ";
+            this.timer_stroke.Text = "До начала марафона 347 дней 6 часов 10 минут 52 секунды ";
             // 
             // real_table_charity
             // 
             this.real_table_charity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.real_table_charity.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.real_table_charity.BackgroundColor = System.Drawing.Color.White;
+            this.real_table_charity.BackgroundColor = global::Practika.Properties.Settings.Default.Button;
             this.real_table_charity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -78,6 +78,7 @@
             this.CharityName,
             this.CharityDescription,
             this.CharityLogo});
+            this.real_table_charity.DataBindings.Add(new System.Windows.Forms.Binding("BackgroundColor", global::Practika.Properties.Settings.Default, "Button", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

@@ -41,5 +41,10 @@ namespace Practika
         {
             TFunction.NextMainForm("Practika.EditRunnerProfileForm", this);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TFunction.NextMainForm("Practika.MyRaceResultsForm", this);
+        }
     }
 }

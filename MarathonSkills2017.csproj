@@ -109,6 +109,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MarathonSkillsDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MyRaceResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyRaceResultsForm.Designer.cs">
+      <DependentUpon>MyRaceResultsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ParentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyRaceResultsForm.resx">
+      <DependentUpon>MyRaceResultsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>

@@ -51,7 +51,7 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 20 дней 17 часов 41 минута 10 секунд ";
+            this.timer_stroke.Text = "До начала марафона 347 дней 5 часов 32 минуты 17 секунд ";
             // 
             // label2
             // 
@@ -114,7 +114,7 @@
             this.sign_in_button.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "ButtonExit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.sign_in_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sign_in_button.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sign_in_button.Location = new System.Drawing.Point(569, 551);
+            this.sign_in_button.Location = new System.Drawing.Point(586, 551);
             this.sign_in_button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.sign_in_button.Name = "sign_in_button";
             this.sign_in_button.Size = new System.Drawing.Size(151, 42);
@@ -131,12 +131,12 @@
             this.button2.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Practika.Properties.Settings.Default, "ButtonExit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(739, 551);
+            this.button2.Location = new System.Drawing.Point(756, 551);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(244, 42);
+            this.button2.Size = new System.Drawing.Size(145, 42);
             this.button2.TabIndex = 11;
-            this.button2.Text = "Регистрация";
+            this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

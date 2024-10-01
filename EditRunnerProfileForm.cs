@@ -53,12 +53,12 @@ namespace Practika
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TFunction.NextMainForm("Practika.RunnerMenuForm", this);
+            AccessControl.GetRights(this);
         }
 
         private void cancel_button_Click(object sender, EventArgs e)
         {
-            TFunction.NextMainForm("Practika.RunnerMenuForm", this);
+            AccessControl.GetRights(this);
         }
 
         private void save_button_Click(object sender, EventArgs e)

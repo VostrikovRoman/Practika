@@ -19,11 +19,12 @@ namespace Practika
         {
             InitializeComponent();
             timer1.Start();
-            TFunction.LoadRunners(runner_box);
+            
         }
 
         private void SponsorForm_Load(object sender, EventArgs e)
         {
+            TFunction.LoadRunners(runner_box);
             TFunction.runner_id = Convert.ToInt32(runner_box.SelectedValue);
             string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
             string SQL = "SELECT Charity.CharityName FROM Runner JOIN Registration ON Runner.RunnerId = Registration.RunnerId JOIN Charity ON Registration.CharityId = Charity.CharityId" +

@@ -37,7 +37,7 @@ namespace Practika
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TFunction.NextMainForm("Practika.RegistrRunnerForm", this);
+            TFunction.NextMainForm("Practika.MainForm", this);
         }
     }
 }
