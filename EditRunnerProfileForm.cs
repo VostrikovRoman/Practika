@@ -23,8 +23,6 @@ namespace Practika
             TFunction.LoadComboBox(country_box, "Country", "CountryName", "CountryCode");
             TFunction.LoadComboBox(gender_box, "Gender", "Gender", "Gender");
 
-            email_box.Text = AccessControl.sign_in_email;
-
 
             string ConnectionString = Properties.Settings.Default.MarathonSkillsDBConnectionString;
             string SQL = "SELECT Users.FirstName, Users.LastName, Runner.Gender, Runner.DateOfBirth, Runner.CountryCode FROM Users " +

@@ -187,5 +187,37 @@ namespace Practika
 
             }
         }
+
+        //Конвертация времени
+        static public string TimeConvert(int time)
+        {
+            int hours = time / 3600;
+            time -= hours * 3600;
+            int minutes = time / 60;
+            time -= minutes * 60;
+            int seconds = time%60;
+            
+            
+            
+            TimeToStart[] ObjectTime = new TimeToStart[3];
+
+            ObjectTime[0] = new TimeToStart("час", "часов", "часа");
+            ObjectTime[1] = new TimeToStart("минута", "минут", "минуты");
+            ObjectTime[2] = new TimeToStart("секунда", "секунд", "секунды");
+
+            ObjectTime[0].value = hours;
+            ObjectTime[1].value = minutes;
+            ObjectTime[2].value = seconds;
+
+            string result = "";
+
+            for (int i = 0; i < ObjectTime.Length; i++)
+            {
+                if (ObjectTime[i].value > 0)
+                    result = result + ObjectTime[i].value + ObjectTime[i].ChangeValue();
+            }
+
+            return result;
+        }
     }
 }

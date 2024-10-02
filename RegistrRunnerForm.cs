@@ -72,7 +72,10 @@ namespace Practika
                     command.ExecuteNonQuery();
 
                     if (AccessControl.AutorizationInSystem(email_box.Text, password_box.Text) == 1)
+                    {
                         AccessControl.GetRights(this);
+                        email_box.Text = AccessControl.sign_in_email;
+                    }
                 }
 
             }

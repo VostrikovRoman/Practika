@@ -30,7 +30,10 @@ namespace Practika
         private void sign_in_button_Click(object sender, EventArgs e)
         {
             if (AccessControl.AutorizationInSystem(login.Text, password.Text) == 1)
+            {
                 AccessControl.GetRights(this);
+                login.Text = AccessControl.sign_in_email;
+            }
             else
                 MessageBox.Show("Неправильно указан логин или пароль");
         }

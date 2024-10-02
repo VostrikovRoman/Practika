@@ -33,42 +33,25 @@ namespace Practika
                 "JOIN Country ON Marathon.CountryCode = Country.CountryCode " +
                 "WHERE Runner.Email = '" + AccessControl.sign_in_email + "' AND Registration.RegistrationStatusId = 4";
 
-
+            string gender = "";
+            int age = 0;
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(SQL, connection);
                 SqlDataReader reader = command.ExecuteReader();
-
+                
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
-                        if (Convert.ToString(reader[0]) == "Male")
-                            gender_box.Text = "мужской";
-                        if (Convert.ToString(reader[0]) == "Female")
-                            gender_box.Text = "женский";
-                        int age = DateTime.Now.Year - Convert.ToDateTime(reader[1]).Year;
-
-                        if (age < 18)
-                            age_box.Text = "до 18";
-                        else if (age >= 18 && age <= 29)
-                            age_box.Text = "18 - 29";
-                        else if (age > 29 && age <= 39)
-                            age_box.Text = "30 - 39";
-                        else if (age > 39 && age <= 55)
-                            age_box.Text = "40 - 55";
-                        else if (age > 55 && age <= 70)
-                            age_box.Text = "56 - 70";
-                        else if (age > 70)
-                            age_box.Text = "более 70";
-
+                        gender = Convert.ToString(reader[0]);
+                        age = DateTime.Now.Year - Convert.ToDateTime(reader[1]).Year;
                     }
 
                 }
                 connection.Close();
-
-                
+                                
             }
             InitializeComponent();
             using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -83,10 +66,27 @@ namespace Practika
                     table_results.Rows.Add();
                     table_results.Rows[i].Cells["MarathonName"].Value = TableResults.Rows[i]["Name"].ToString();
                     table_results.Rows[i].Cells["MarathonDist"].Value = TableResults.Rows[i]["Dist"].ToString();
-                    table_results.Rows[i].Cells["MarathonTime"].Value = TableResults.Rows[i]["Time"].ToString();
+                    table_results.Rows[i].Cells["MarathonTime"].Value = TFunction.TimeConvert(Convert.ToInt32(TableResults.Rows[i]["Time"]));
 
                 }
             }
+            if (gender == "Male")
+                gender_box.Text = "мужской";
+            else if (gender == "Female")
+                gender_box.Text = "женский";
+
+            if (age < 18)
+                age_box.Text = "до 18";
+            else if (age >= 18 && age <= 29)
+                age_box.Text = "18 - 29";
+            else if (age > 29 && age <= 39)
+                age_box.Text = "30 - 39";
+            else if (age > 39 && age <= 55)
+                age_box.Text = "40 - 55";
+            else if (age > 55 && age <= 70)
+                age_box.Text = "56 - 70";
+            else if (age > 70)
+                age_box.Text = "более 70";
         }
 
         private void button1_Click(object sender, EventArgs e)

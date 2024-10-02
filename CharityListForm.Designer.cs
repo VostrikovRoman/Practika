@@ -57,10 +57,12 @@
             // 
             // timer_stroke
             // 
-            this.timer_stroke.Text = "До начала марафона 347 дней 6 часов 10 минут 52 секунды ";
+            this.timer_stroke.Text = "До начала марафона 346 дней 20 часов 40 минут 31 секунда ";
             // 
             // real_table_charity
             // 
+            this.real_table_charity.AllowUserToAddRows = false;
+            this.real_table_charity.AllowUserToDeleteRows = false;
             this.real_table_charity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.real_table_charity.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.real_table_charity.BackgroundColor = global::Practika.Properties.Settings.Default.Button;
@@ -90,6 +92,7 @@
             this.real_table_charity.GridColor = System.Drawing.Color.Gray;
             this.real_table_charity.Location = new System.Drawing.Point(205, 261);
             this.real_table_charity.Name = "real_table_charity";
+            this.real_table_charity.ReadOnly = true;
             this.real_table_charity.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
@@ -116,6 +119,7 @@
             this.CharityName.DefaultCellStyle = dataGridViewCellStyle2;
             this.CharityName.HeaderText = "Наименование";
             this.CharityName.Name = "CharityName";
+            this.CharityName.ReadOnly = true;
             this.CharityName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // CharityDescription
@@ -125,11 +129,13 @@
             this.CharityDescription.DefaultCellStyle = dataGridViewCellStyle3;
             this.CharityDescription.HeaderText = "Описание";
             this.CharityDescription.Name = "CharityDescription";
+            this.CharityDescription.ReadOnly = true;
             // 
             // CharityLogo
             // 
             this.CharityLogo.HeaderText = "Логотип";
             this.CharityLogo.Name = "CharityLogo";
+            this.CharityLogo.ReadOnly = true;
             // 
             // label2
             // 
